@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
-<script src="build/react.js"></script>
-<script src="build/JSXTransformer.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>Example Page</title>
-<link href="styles/style2014.css" rel="stylesheet" type="text/css">
+  <script src="build/react.js"></script>
+  <script src="build/JSXTransformer.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Example Page</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 
-  <script type="text/jsx">
+  <div id="content"></div>
+  <div id="footer"></div>
 
-      var WdjShare = React.createClass({
-      render:function(){
-    	// debugger;
-
-      return <div className="share-body">
-
-      <a href={this.props.weiboUrl} alt={this.props.weiboTitle} className={this.props.weiboIcon}><i></i></a>
-
-      <a href={this.props.wechatUrl} className={this.props.wechatIcon} alt={this.props.wechatTitle}><i></i></a></div>
-    }
-  });
-
-
-  React.render(<WdjShare weiboUrl="http://www.slt.fr" weiboIcon="share-weibo" weiboTitle="Weibo Share" wechatIcon="share-wechat" wechatUrl="#" wechatTitle="Wechat Share"/>, document.body);
-
-  </script>
+  <script type="text/jsx" src="appcard.js"></script>
+  <script type="text/jsx" src="socialshare.js"></script>
 
 </body>
 </html>
