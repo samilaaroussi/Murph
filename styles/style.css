@@ -1260,7 +1260,7 @@ only screen and (min-device-pixel-ratio: 2) {
     color: #333;
     background: #fff
 }
-.card a.view-detail {
+.card .view-detail {
     display: block;
     text-decoration: none;
     overflow: hidden;
