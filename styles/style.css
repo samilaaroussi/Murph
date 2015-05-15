@@ -1,0 +1,1917 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,td,th {
+  text-align: left;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+blockquote,q {
+  quotes: none;
+}
+
+blockquote:after,blockquote:before,q:after,q:before {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: 0;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
+  display: block;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@-moz-keyframes bounce {
+  100% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@-ms-keyframes bounce {
+  100% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@-o-keyframes bounce {
+  100% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce {
+  100% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+.wdj-loader {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -moz-transition: -moz-transform .3s ease-in;
+  -o-transition: -o-transform .3s ease-in;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background: #f5f5f5;
+}
+
+.wdj-loader .wdj-loader-pea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -90px 0 0 -60px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 0;
+}
+
+.wdj-loader .wdj-loader-pea .loading-text {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  line-height: 1;
+  font-size: 14px;
+  color: #666;
+}
+
+.wdj-loader .pea-wrap {
+  display: inline-block;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  width: 64px;
+  height: 68px;
+  margin: 10px 0 0 15px;
+  vertical-align: middle;
+}
+
+.wdj-loader .loader-icon {
+  display: inline-block;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-repeat: no-repeat;
+  background-image: url('http://static.wdjimg.com/www/images/www/voice2014/loader.png');
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.wdj-loader .pod {
+  background-position: 0 -128px;
+  width: 64px;
+  height: 68px;
+}
+
+.wdj-loader .pea-left-bg {
+  -moz-animation: bounce .3s ease .1s infinite alternate;
+  -webkit-animation: bounce .3s ease .1s infinite alternate;
+  animation: bounce .3s ease .1s infinite alternate;
+  background-position: 0 0;
+  position: absolute;
+  left: 2px;
+  top: 42px;
+  width: 22px;
+  height: 22px;
+}
+
+.wdj-loader .pea-right-bg {
+  -moz-animation: bounce .3s ease .2s infinite alternate;
+  -webkit-animation: bounce .3s ease .2s infinite alternate;
+  animation: bounce .3s ease .2s infinite alternate;
+  background-position: 0 -60px;
+  position: absolute;
+  left: 16px;
+  top: 41px;
+  width: 26px;
+  height: 26px;
+}
+
+.wdj-loader .pea-left {
+  -moz-animation: bounce .3s ease .1s infinite alternate;
+  -webkit-animation: bounce .3s ease .1s infinite alternate;
+  animation: bounce .3s ease .1s infinite alternate;
+  background-position: 0 -32px;
+  position: absolute;
+  left: 4px;
+  top: 44px;
+  width: 18px;
+  height: 18px;
+}
+
+.wdj-loader .pea-right {
+  -moz-animation: bounce .3s ease .2s infinite alternate;
+  -webkit-animation: bounce .3s ease .2s infinite alternate;
+  animation: bounce .3s ease .2s infinite alternate;
+  background-position: 0 -96px;
+  position: absolute;
+  left: 18px;
+  top: 43px;
+  width: 22px;
+  height: 22px;
+}
+
+.wdj-loader.hide {
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+@media only screen and (min--moz-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:2 / 1),only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-device-pixel-ratio:2) {
+  .wdj-loader .loader-icon {
+    background-image: url('http://static.wdjimg.com/www/images/www/voice2014/loader@2x.png');
+  }
+
+  .wdj-loader .pod {
+    background-position: 0 -108px;
+    background-size: 64px 175px;
+  }
+
+  .wdj-loader .pea-left-bg {
+    background-position: 0 0;
+    background-size: 64px 175px;
+  }
+
+  .wdj-loader .pea-right-bg {
+    background-position: 0 -49px;
+    background-size: 64px 175px;
+    height: 26px;
+    width: 26px;
+  }
+
+  .wdj-loader .pea-left {
+    background-position: 0 -27px;
+    background-size: 64px 175px;
+  }
+
+  .wdj-loader .pea-right {
+    background-position: 0 -81px;
+    background-size: 64px 175px;
+  }
+}
+
+.container {
+  margin: 0 15px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.section {
+  min-width: 290px;
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.title {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.title span {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.title span:before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 100%;
+  width: 40px;
+  height: 1px;
+  background: #666;
+}
+
+.title span:after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 100%;
+  width: 40px;
+  height: 1px;
+  background: #666;
+}
+
+html.loading,html.loading body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+  position: relative;
+  background-color: #666 ;
+  background-attachment: fixed;
+  font-family: "Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.78;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.header a.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.header a.logo i {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -304px;
+  background-repeat: no-repeat;
+  height: 33px;
+  overflow: hidden;
+  width: 82px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .header a.logo i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -269px;
+    background-size: 146.5px 391.5px;
+    height: 33px;
+    width: 82px;
+  }
+}
+
+.header a.logo span {
+  text-indent: -999em;
+  font-size: 0;
+  display: none;
+}
+
+.header a.logo:hover i {
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -261px;
+  background-repeat: no-repeat;
+  height: 33px;
+  overflow: hidden;
+  width: 82px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .header a.logo:hover i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -231px;
+    background-size: 146.5px 391.5px;
+    height: 33px;
+    width: 82px;
+  }
+}
+
+.header .bg {
+  padding: 100px 0;
+}
+
+.header .bg i {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 244px;
+  height: 288px;
+  margin: auto;
+  background: url('http://static.wdjimg.com/www/images/www/tochild/cover.png') center center no-repeat;
+}
+
+.header .container {
+  margin: 0;
+  padding: 0;
+  text-indent: -999em;
+  font-size: 0;
+  display: none;
+}
+
+.text .bg {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 86px;
+  height: 120px;
+  background: url('http://static.wdjimg.com/www/images/www/tochild/fish.png') center center no-repeat;
+}
+
+.text .our-team {
+  padding-top: 40px;
+  text-align: right;
+}
+
+.download {
+  min-height: 130px;
+  margin-top: 30px;
+}
+
+.download .button {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  margin: 0 auto;
+}
+
+.download .light {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: absolute;
+  top: -20px;
+}
+
+.download .left {
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -184px;
+  background-repeat: no-repeat;
+  height: 23px;
+  overflow: hidden;
+  width: 55px;
+  right: 80%;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .download .left {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -165px;
+    background-size: 146.5px 391.5px;
+    height: 22.5px;
+    width: 55px;
+  }
+}
+
+.download .right {
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -217px;
+  background-repeat: no-repeat;
+  height: 34px;
+  overflow: hidden;
+  width: 77px;
+  left: 80%;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .download .right {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -192px;
+    background-size: 146.5px 391.5px;
+    height: 33.5px;
+    width: 77px;
+  }
+}
+
+.download .android-btn,.download .apple-btn {
+  display: none;
+}
+
+.download a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  text-shadow: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  padding: 8px 23px;
+  background: #359f47;
+  text-align: left;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.download a:hover {
+  background: #359A20;
+}
+
+.download .device {
+  margin: 0 10px 0 0;
+}
+
+.download .apple-btn .device {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -39px;
+  background-repeat: no-repeat;
+  height: 27px;
+  overflow: hidden;
+  width: 22px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .download .apple-btn .device {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -34px;
+    background-size: 146.5px 391.5px;
+    height: 27px;
+    width: 22px;
+  }
+}
+
+.download .android-btn .device {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 29px;
+  overflow: hidden;
+  width: 25px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .download .android-btn .device {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 0;
+    background-size: 146.5px 391.5px;
+    height: 29px;
+    width: 25px;
+  }
+}
+
+.android .apple-btn,.android .pc-btn {
+  display: none;
+}
+
+.android .android-btn {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.ios .android-btn,.ios .pc-btn {
+  display: none;
+}
+
+.ios .apple-btn {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.poem-list {
+  min-height: 400px;
+}
+
+.poem-list li {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto 10px;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.poem-list li .title {
+  padding-bottom: 0;
+}
+
+.poem-list .info {
+  position: relative;
+  margin-left: 70px;
+  text-align: left;
+  line-height: 1;
+  z-index: 2;
+}
+
+.poem-list .info .title {
+  padding: 5px 0 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.poem-list .info .spot {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 4px;
+  height: 4px;
+  background: #999;
+  margin: 0 5px 0 7px;
+}
+
+.poem-list .reader,.poem-list .reader-intro {
+  display: inline;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.lyrics-wrap {
+  display: none;
+  height: 200px;
+}
+
+.lyrics-inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.lyrics-cont {
+  margin: 10px;
+}
+
+.playing .lyrics-wrap {
+  display: block;
+  margin-top: 76px;
+}
+
+.playing .info {
+  position: absolute;
+  top: 10px;
+}
+
+.playing .buffer,.playing .progress {
+  height: 86px;
+  cursor: default;
+}
+
+.playing .progress {
+  filter: alpha(Opacity=20);
+  opacity: .2;
+  background: #359f47;
+}
+
+.share {
+  padding-bottom: 30px;
+}
+
+.share .title {
+  padding-bottom: 0;
+}
+
+.share .title span {
+  padding: 0 15px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.share-body {
+  position: relative;
+}
+
+.share-body a,.share-body i {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  text-decoration: none;
+}
+
+.share-body span {
+  font-size: 0;
+  text-indent: -999em;
+  display: none;
+}
+
+.share-body .share-weibo {
+  margin-right: 15px;
+}
+
+.share-body .share-weibo i {
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -397px;
+  background-repeat: no-repeat;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .share-body .share-weibo i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -352px;
+    background-size: 146.5px 391.5px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.share-body .share-wechat {
+  margin-right: 15px;
+}
+
+.share-body .share-wechat i {
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -347px;
+  background-repeat: no-repeat;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .share-body .share-wechat i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -307px;
+    background-size: 146.5px 391.5px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.share-body .share-douban i {
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -134px;
+  background-repeat: no-repeat;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .share-body .share-douban i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -120px;
+    background-size: 146.5px 391.5px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.dialog-wrap {
+  text-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 0 0;
+  background: rgba(0,0,0,.7);
+  z-index: 99;
+}
+
+.dialog-wrap .dialog {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.dialog-wrap .dialog-inner {
+  max-width: 100%;
+  background: #000;
+  margin: 0 auto;
+}
+
+.dialog-wrap .dialog-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #359f47;
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.share-qrcode-wrap {
+  width: 100%;
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  text-align: center;
+}
+
+.share-qrcode-wrap .share-qrcode {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+  -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+  box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+  position: relative;
+  max-width: 230px;
+  padding: 20px;
+  margin: 0 auto;
+  background: #fff;
+  font-size: 12px;
+}
+
+.share-qrcode-wrap .dialog-close {
+  text-shadow: none;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #359f47;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.wechat-share-wrap .dialog-close {
+  top: 99px;
+}
+
+.wechat-share-wrap .dialog-inner {
+  max-width: 280px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.wechat-share-wrap .arrow-wechat {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/1x-sf5de9343cf.png');
+  background-position: 0 -76px;
+  background-repeat: no-repeat;
+  height: 48px;
+  overflow: hidden;
+  width: 145px;
+  float: right;
+  margin-right: 20px;
+}
+
+@media (-webkit-min-device-pixel-ratio:2),(-o-min-device-pixel-ratio:3 / 2),(min-device-pixel-ratio:2) {
+  .wechat-share-wrap .arrow-wechat {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/tochild/2x-se3b74100cb.png');
+    background-position: 0 -66px;
+    background-size: 146.5px 391.5px;
+    height: 48.5px;
+    width: 146.5px;
+  }
+}
+
+.wechat-share-wrap p {
+  padding-top: 10px;
+  clear: both;
+}
+
+.show-dialog {
+  overflow: hidden;
+}
+
+@media screen and (min-width:300px) {
+  body {
+    background: #666;
+    background-size: 600px;
+  }
+
+  .header a.logo {
+    display: none;
+  }
+
+  .text .container {
+    margin: 0 20px 20px;
+    padding: 0;
+    font-size: 14px;
+    text-indent: 0;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width:300px) and (min--moz-device-pixel-ratio:2),only screen and (min-width:300px) and (-o-min-device-pixel-ratio:2 / 1),only screen and (min-width:300px) and (-webkit-min-device-pixel-ratio:2),only screen and (min-width:300px) and (min-device-pixel-ratio:2) {
+  .header .bg i {
+    background-image: url('http://static.wdjimg.com/www/images/www/tochild/cover@2x.png');
+    background-size: 244px;
+  }
+
+  .text .bg {
+    background-image: url('http://static.wdjimg.com/www/images/www/tochild/fish@2x.png');
+    background-size: 86px;
+  }
+}
+
+@media screen and (min-width:414px) {
+  .playing .lyrics-wrap {
+    margin-top: 69px;
+  }
+
+  .playing .buffer,.playing .progress {
+    height: 69px;
+  }
+}
+
+@media screen and (min-width:767px) {
+  .section {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .header a.logo {
+    display: block;
+  }
+
+  .text .bg {
+    display: none;
+  }
+
+  .text .container {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.zen-player {
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.zen-player .player {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.zen-player.play {
+  cursor: pointer;
+}
+
+.zen-player .button {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background: #359f47;
+  cursor: pointer;
+}
+
+.zen-player.play .button {
+  border-radius: 30px;
+}
+
+.zen-player .button .icon {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.zen-player .button .icon.play {
+  background: url('http://static.wdjimg.com/www/images/www/tochild/play.png') no-repeat;
+  background-size: cover;
+}
+
+.zen-player .button .icon.pause {
+  background: url('http://static.wdjimg.com/www/images/www/tochild/pause.png') no-repeat;
+  background-size: cover;
+}
+
+.buffer,.progress {
+  filter: alpha(Opacity=50);
+  opacity: .5;
+  position: absolute;
+  height: 100%;
+  margin: -10px 0 -10px -10px;
+  background: #ddd;
+  z-index: 0;
+}
+
+.buffer {
+  background: #eee;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff url('http://static.wdjimg.com/www/style/images/wdj/photosync/loading.gif') center center no-repeat;
+    z-index: 999
+}
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .loader {
+        background-size: 26px
+    }
+}
+.bg-list,
+.bg-list .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0
+}
+.bg {
+    -moz-transition: opacity .6s ease 0s;
+    -o-transition: opacity .6s ease 0s;
+    -webkit-transition: opacity .6s ease;
+    -webkit-transition-delay: 0s;
+    transition: opacity .6s ease 0s;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover
+}
+.bg.current {
+    display: block
+}
+@-webkit-keyframes fadeOutLeft {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    50% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0)
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+@keyframes fadeOutLeft {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    50% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0)
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+.fadeOutLeft {
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft
+}
+.gesture {
+    -moz-transition: -moz-transform 1s ease 0s;
+    -o-transition: -o-transform 1s ease 0s;
+    -webkit-transition: -webkit-transform 1s ease;
+    -webkit-transition-delay: 0s;
+    transition: transform 1s ease 0s;
+    -moz-transform: translate3d(0px, 0, 0);
+    -ms-transform: translate3d(0px, 0, 0);
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+    -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -moz-animation-name: fadeOutLeft;
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    width: 100%;
+    z-index: 2
+}
+.gesture i {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -119px;
+    background-repeat: no-repeat;
+    height: 25px;
+    overflow: hidden;
+    width: 40px;
+    margin: 0 auto
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .gesture i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -105px;
+        background-size: 150px 505.5px;
+        height: 25px;
+        width: 40px
+    }
+}
+.cover {
+    position: relative
+}
+.cover .description {
+    font-size: 12px;
+    padding: 10px;
+    color: #fff
+}
+.cover .gesture {
+    bottom: 10px
+}
+.cover-inner {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -230px
+}
+.logo-cover {
+    margin: 20px 0
+}
+.logo-cover i {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -234px;
+    background-repeat: no-repeat;
+    height: 140px;
+    overflow: hidden;
+    width: 150px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .logo-cover i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -210px;
+        background-size: 150px 505.5px;
+        height: 140px;
+        width: 150px
+    }
+}
+.wdj-logo {
+    padding-bottom: 10px
+}
+.wdj-logo i {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -445px;
+    background-repeat: no-repeat;
+    height: 40px;
+    overflow: hidden;
+    width: 40px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .wdj-logo i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -406px;
+        background-size: 150px 505.5px;
+        height: 40px;
+        width: 40px
+    }
+}
+.slogan {
+    position: relative;
+    width: 250px;
+    height: 75px;
+    margin: 0 auto;
+    z-index: 0
+}
+.slogan i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center bottom;
+    background-repeat: no-repeat
+}
+.card-wrap {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -240px
+}
+.card {
+    position: relative;
+    z-index: 1;
+    max-width: 275px;
+    margin: auto;
+    padding: 10px;
+    color: #333;
+    background: #fff
+}
+.card a.view-detail {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    padding-bottom: 10px
+}
+.card .icon {
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    float: left
+}
+.card .title {
+    padding: 12px 0;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    color: #333;
+    float: left;
+    margin-left: 10px
+}
+.card .description {
+    font-size: 12px;
+    line-height: 1.5
+    padding-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid #eee
+}
+.logo-card {
+    padding: 20px 0
+}
+.logo-card i {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -154px;
+    background-repeat: no-repeat;
+    height: 70px;
+    overflow: hidden;
+    width: 105px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .logo-card i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -135px;
+        background-size: 150px 505.5px;
+        height: 70px;
+        width: 105px
+    }
+}
+a.button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    line-height: 32px;
+    text-decoration: none
+}
+a.button i {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -419px;
+    background-repeat: no-repeat;
+    height: 16px;
+    overflow: hidden;
+    width: 16px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    a.button i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -385px;
+        background-size: 150px 505.5px;
+        height: 16px;
+        width: 16px
+    }
+}
+a.button span {
+    padding-left: 8px
+}
+.button.install {
+    background: #4CC9B6;
+    color: #fff;
+    position: absolute;
+    top: 18px;
+    right: 10px
+}
+.button.open {
+    background: #ddd;
+    color: #333
+}
+.button.open i {
+    display: none
+}
+.button.open span {
+    padding: 0
+}
+.ios a.button i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+    margin-top: -3px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .ios a.button i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 0;
+        background-size: 150px 505.5px;
+        height: 16px;
+        width: 16px
+    }
+}
+.card-7 .card .icon {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%
+}
+.pagination {
+    position: fixed;
+    right: 5px;
+    top: 50%;
+    width: 5px;
+    height: 100%;
+    margin-top: -60px;
+    font-size: 0;
+    line-height: 0
+}
+.page {
+    display: inline-block;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 5px;
+    height: 5px;
+    margin: 0 0 10px;
+    background: rgba(0, 0, 0, .4);
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0
+}
+.current-page {
+    background: #fff
+}
+.share-buttons-wrap {
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 3
+}
+.share-buttons b {
+    display: inline-block;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    height: 35px;
+    color: #fff;
+    line-height: 38px;
+    vertical-align: bottom
+}
+.share-buttons a,
+.share-buttons i {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    text-decoration: none
+}
+.share-buttons a {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 5px;
+    background: #fff;
+    line-height: 1
+}
+.share-buttons span {
+    font-size: 0;
+    text-indent: -999em;
+    display: none
+}
+.share-buttons .share-weibo {
+    margin: 0 5px;
+    background: #FE7472
+}
+.share-buttons .share-weibo i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -530px;
+    background-repeat: no-repeat;
+    height: 25px;
+    overflow: hidden;
+    width: 25px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .share-buttons .share-weibo i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -481px;
+        background-size: 150px 505.5px;
+        height: 25px;
+        width: 25px
+    }
+}
+.share-buttons .share-wechat {
+    margin: 0 5px;
+    background: #63c650
+}
+.share-buttons .share-wechat i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -495px;
+    background-repeat: no-repeat;
+    height: 25px;
+    overflow: hidden;
+    width: 25px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .share-buttons .share-wechat i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -451px;
+        background-size: 150px 505.5px;
+        height: 25px;
+        width: 25px
+    }
+}
+.share-buttons .share-wechat-timeline {
+    display: none;
+    margin: 0 5px;
+    background: #78c83d
+}
+.share-buttons .share-wechat-timeline i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -384px;
+    background-repeat: no-repeat;
+    height: 25px;
+    overflow: hidden;
+    width: 25px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .share-buttons .share-wechat-timeline i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -355px;
+        background-size: 150px 505.5px;
+        height: 25px;
+        width: 25px
+    }
+}
+.share-buttons .share-douban {
+    margin: 0 5px;
+    background: #54a73d
+}
+.share-buttons .share-douban i {
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -84px;
+    background-repeat: no-repeat;
+    height: 25px;
+    overflow: hidden;
+    width: 25px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .share-buttons .share-douban i {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -75px;
+        background-size: 150px 505.5px;
+        height: 25px;
+        width: 25px
+    }
+}
+.p4 .share-wechat-timeline {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline
+}
+.dialog-wrap {
+    text-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 0 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 999
+}
+.dialog-wrap .dialog {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+.dialog-wrap .dialog-inner {
+    max-width: 100%;
+    background: #000;
+    margin: 0 auto
+}
+.dialog-wrap .dialog-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer
+}
+.share-qrcode-wrap {
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    text-align: center;
+    z-index: 999
+}
+.share-qrcode-wrap .share-qrcode {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    position: relative;
+    max-width: 240px;
+    padding: 20px 10px;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 12px
+}
+.share-qrcode-wrap .dialog-close {
+    text-shadow: none;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #333;
+    font-size: 18px;
+    line-height: 43px;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer
+}
+.wechat-share-wrap .dialog-close {
+    top: 100px
+}
+.wechat-share-wrap .dialog-inner {
+    max-width: 280px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    font-size: 12px;
+    background: #fff
+}
+.wechat-share-wrap .arrow-wechat {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
+    background-position: 0 -26px;
+    background-repeat: no-repeat;
+    height: 48px;
+    overflow: hidden;
+    width: 145px;
+    float: right;
+    margin-right: 20px
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 3 / 2),
+(min-device-pixel-ratio: 2) {
+    .wechat-share-wrap .arrow-wechat {
+        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
+        background-position: 0 -21px;
+        background-size: 150px 505.5px;
+        height: 48.5px;
+        width: 146.5px
+    }
+}
+.wechat-share-wrap p {
+    padding-top: 10px;
+    clear: both
+}
+@media screen and (min-width: 290px) {
+    body,
+    html {
+        height: 100%
+    }
+    .card-1 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-1.png')
+    }
+    .card-2 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-2.png')
+    }
+    .card-3 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-3.png')
+    }
+    .card-4 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-4.png')
+    }
+    .card-5 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-5.png')
+    }
+    .card-6 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-6.png')
+    }
+    .card-7 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-7.png')
+    }
+}
+@media only screen and (min-width: 290px) and (min--moz-device-pixel-ratio: 2),
+only screen and (min-width: 290px) and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (min-width: 290px) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-width: 290px) and (min-device-pixel-ratio: 2) {
+    .slogan i {
+        background-size: 250px
+    }
+    .card-1 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-1@2x.png')
+    }
+    .card-2 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-2@2x.png')
+    }
+    .card-3 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-3@2x.png')
+    }
+    .card-4 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-4@2x.png')
+    }
+    .card-5 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-5@2x.png')
+    }
+    .card-6 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-6@2x.png')
+    }
+    .card-7 .slogan i {
+        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-7@2x.png')
+    }
+}
+.orientation {
+    filter: alpha(Opacity=90);
+    opacity: .9;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #FE7472;
+    z-index: 2
+}
+.orientation p {
+    font-size: 14px;
+    padding: 5px 0;
+    color: #fff
+}
+html.landscape {
+    height: 100%;
+    overflow: hidden
+}
+.landscape .orientation {
+    display: block
+}
+.pc.landscape .orientation {
+    display: none
+}
+@media screen and (orientation: landscape),
+screen and (-moz-orientation: landscape),
+screen and (-o-orientation: landscape),
+screen and (-webkit-orientation: landscape) {
+    .orientation {
+        display: block
+    }
+    .pc .orientation {
+        display: none
+    }
+}
+.smallHeight body {
+    min-height: initial
+}
+.smallHeight .cover-inner {
+    margin-top: -210px
+}
+.smallHeight .logo-cover {
+    -moz-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65);
+    margin-bottom: 0
+}
+.smallHeight .wdj-logo {
+    margin-top: -20px
+}
+.smallHeight .description {
+    padding-top: 0
+}
+.smallHeight .card-list-wrap {
+    margin-top: 0
+}
+.smallHeight .card-wrap {
+    margin-top: -170px
+}
+.smallHeight .logo-card {
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    margin-top: -25px;
+    padding-bottom: 10px
+}
+.smallHeight .slogan {
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    margin-top: -16px
+}
+.smallHeight .card {
+    margin-top: -7px
+}
+.smallHeight .card a.view-detail {
+    overflow: hidden;
+    padding-bottom: 10px
+}
+.smallHeight .card .icon {
+    float: left
+}
+.smallHeight .card .title {
+    float: left;
+    margin-left: 10px
+}
+.smallHeight .card .description {
+    padding-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid #eee
+}
+.smallHeight .card .install {
+    position: absolute;
+    top: 18px;
+    right: 10px
+}
+.smallHeight .share-buttons-wrap {
+    bottom: 10px
+}
+.card-list-wrap {
+    -moz-backface-visibility: "hidden";
+    -webkit-backface-visibility: "hidden";
+    backface-visibility: "hidden";
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+}
+.card-list {
+    -webkit-transition-property: -webkit-transform, left, top;
+    -webkit-transition-duration: 0s;
+    -webkit-transform: translate3d(0px, 0, 0);
+    -webkit-transition-timing-function: ease;
+    -moz-transition-property: -moz-transform, left, top;
+    -moz-transition-duration: 0s;
+    -moz-transform: translate3d(0px, 0, 0);
+    -moz-transition-timing-function: ease;
+    -o-transition-property: -o-transform, left, top;
+    -o-transition-duration: 0s;
+    -o-transition-timing-function: ease;
+    -o-transform: translate(0px, 0);
+    -ms-transition-property: -ms-transform, left, top;
+    -ms-transition-duration: 0s;
+    -ms-transform: translate3d(0px, 0, 0);
+    -ms-transition-timing-function: ease;
+    transition-property: transform, left, top;
+    transition-duration: 0s;
+    transform: translate3d(0px, 0, 0);
+    transition-timing-function: ease;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+.swiper-free-mode>.card-list {
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    margin: 0 auto
+}
+.slide {
+    position: relative;
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+.swiper-wp8-horizontal {
+    -ms-touch-action: pan-y
+}
+.swiper-wp8-vertical {
+    -ms-touch-action: pan-x
+}
+.card-list-wrap {
+    width: 100%;
+    height: 100%
+}
+.card-list {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
