@@ -15,13 +15,46 @@
 
     <script src="build/react.js"></script>
     <script src="build/JSXTransformer.js"></script>
+    <script src="build/katana.js"></script>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script> 
+
+        var fullList = null;
+        var pageData = null;
+        var shareData = null;
+        var shareDialogRendered = false;
+
+        var fullpageSwiper;
+        var cardListSwiper;
+        var mapSwiper;
+        var oldVersion = false;
+
+        var device = {};
+
+        device.isP4 = campaignTools.UA.inWdj;
+        device.isWechat = campaignTools.UA.inWechat;
+        device.isRetina = campaignTools.UA.isRetina;
+        device.isPC = campaignTools.inPC();
+        device.isAndroid = campaignTools.UA.inAndroid;
+
+        if (device.isP4) {
+            var versionName = campaignTools.getVersionName();
+            versionName = versionName.split('.');
+            if (versionName[0] < 4 || versionName[1] < 22) {
+                oldVersion = true;
+            }
+        }
+
+        var leftFlag = false;
+        var rightFlag = false;
+        
+
+    </script>
     <script type="text/jsx" src="components/appcard.js"></script>
     <script type="text/jsx" src="components/qrcode.js"></script>
     <script type="text/jsx" src="components/weibo-share.js"></script>
     <script type="text/jsx" src="components/wechat-share.js"></script>
     <script type="text/jsx" src="components/moments-share.js"></script>
-
     <script type="text/jsx"> 
     React.render(
         <div className='content'>
@@ -40,6 +73,5 @@
         </div>
         , document.getElementById('content'));
     </script>
-
 </body>
 </html>
