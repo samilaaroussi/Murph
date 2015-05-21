@@ -10,10 +10,34 @@ var WDJAppCard = React.createClass({
 
     componentWillMount: function() {
 
-        var url;
-        url="http://apps.wandoujia.com/api/v1/apps/" + this.props.packageName;
+        $.ajax({
+            url: 'http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName,
+            beforeSend: function(x) {
+                if(x && x.overrideMimeType) {
+                    x.overrideMimeType("application/j-son;charset=UTF-8");
+                }
+            },
 
-        $.getJSON(url + "?callback=?", (function(data) {
+            dataType: "jsonp",
+            
+            success: function(data){
+                return this.setState({
+                    icon: data.icons.px48,
+                    title: data.title,
+                    desc: data.description
+                });
+            }.bind(this)
+        });
+
+    },
+
+/* getJSON version
+
+    componentWillMount: function() {
+
+        var url='http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName;
+
+        $.getJSON(url + '?callback=?', (function(data) {
 
             return this.setState({
                 icon: data.icons.px48,
@@ -23,21 +47,21 @@ var WDJAppCard = React.createClass({
 
         }).bind(this));
 
-    },
+    },*/
 
     render: function(){
 
+        var desc = typeof this.state.desc;
         return (
-
             <div className="card">
 
                 <div className='view-detail' href='javascript:void(0);' target='_default'>
                     <div className="icon">
-                        <img src={this.state.icon} width="50px" height="auto" alt='Title' />
+                        <img src={this.state.icon} alt={this.state.title} />
                     </div>
                     <div className="title">{this.state.title}</div>
                 </div>
-                    <div className="description">{this.state.desc}</div>
+                    <div className="description"><span dangerouslySetInnerHTML={{__html: desc}}/></div>
                     <a href="javascript:void(0);" className="button install"><i></i><span>安装</span></a>
             </div>
         );

@@ -10,8 +10,6 @@
 <body>
 
     <div id="content"></div>
-    <div id="qrcode"></div>
-    <div id="footer"></div>
 
     <script src="build/react.js"></script>
     <script src="build/JSXTransformer.js"></script>
@@ -47,7 +45,7 @@
 
         var leftFlag = false;
         var rightFlag = false;
-        
+
 
     </script>
     <script type="text/jsx" src="components/appcard.js"></script>
@@ -55,18 +53,30 @@
     <script type="text/jsx" src="components/weibo-share.js"></script>
     <script type="text/jsx" src="components/wechat-share.js"></script>
     <script type="text/jsx" src="components/moments-share.js"></script>
+    <script type="text/jsx" src="components/pages.js"></script>
+    <script type="text/jsx" src="components/page.js"></script>
+    <script type="text/jsx" src="components/appcardlist.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="Swiper/dist/js/swiper.min.js"></script>
+
     <script type="text/jsx"> 
     React.render(
         <div className='content'>
-            <WDJAppCard packageName="vStudio.Android.Camera360"/>
-
+        <WDJAppCardList>
+            <li><WDJAppCard packageName="vStudio.Android.Camera360"/></li>
+            <li><WDJAppCard packageName="com.tencent.mm"/></li>
+        </WDJAppCardList>
             <WDJQRCode content="Hello World !"/>
+
             <div className="share-buttons-wrap">
                 <div className="share-buttons">
-                    <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg"/>
+                    <b>分享到：</b>
 
+                    <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg"/>
                     <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share"/>
                     <WDJShareMoments url="http://example.com" icon="share-wechat" title="Moments Share"/>
+
                 </div>
             </div>
 
