@@ -63,10 +63,7 @@
     <script type="text/jsx"> 
     React.render(
         <div className='content'>
-        <WDJAppCardList>
-            <li><WDJAppCard packageName="vStudio.Android.Camera360"/></li>
-            <li><WDJAppCard packageName="com.tencent.mm"/></li>
-        </WDJAppCardList>
+            <AppCardList dataValue={["vStudio.Android.Camera360", "com.Tencent.mm"]}/>
             <WDJQRCode content="Hello World !"/>
 
             <div className="share-buttons-wrap">
