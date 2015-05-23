@@ -1,8 +1,8 @@
 var WDJShareWeibo = React.createClass({
 
-	render: function(){
+    render: function(){
         if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')){
-    		res = campaignTools.runAppShare(this.props.title, this.props.desc, this.props.url, 'WEIBO');
+            res = campaignTools.runAppShare(this.props.title, this.props.desc, this.props.url, 'WEIBO');
         }
 
         else {
