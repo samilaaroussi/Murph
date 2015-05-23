@@ -5,6 +5,8 @@ html {
 
 ol,ul {
   list-style: none;
+  margin:0;
+  padding: 0;
 }
 
 a img {
@@ -719,6 +721,7 @@ body {
     top: 50%;
     margin-top: -240px
 }
+
 .card {
     position: relative;
     z-index: 1;
@@ -736,10 +739,9 @@ body {
     padding-bottom: 10px
 }
 .card .icon {
-    border-radius: 11px;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 68px;
+    height: 68px;
     margin: 0 auto;
     overflow: hidden;
     float: left
@@ -752,13 +754,23 @@ body {
     float: left;
     margin-left: 10px
 }
+.card .count {
+
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1;
+    color: #999;
+    float: left;
+    margin-left: 10px
+}
 .card .description {
     font-size: 12px;
     color: #666;
     line-height: 1.5
     padding-bottom: 0;
     padding-top: 10px;
-    border-top: 1px solid #eee
+    border-top: 1px solid #eee;
+    text-align: left;
 }
 .logo-card {
     padding: 20px 0

@@ -1,10 +1,30 @@
-var WDJAppCard = React.createClass({
+var WDJCardList = React.createClass({
+    render: function () {
+        return (
+            <ul>
 
+                {this.props.dataValue.map(function (item) {
+                    if(typeof item == 'string'){
+                        return <li><WDJAppCard packageName={item}/></li>;
+                    }
+
+                    else if(typeof item == 'object'){
+                        return <li>{item}</li>;
+                    }
+
+                })}
+            </ul>
+        );
+    }
+});
+
+var WDJAppCard = React.createClass({
     getInitialState: function() {
         return {
-            icon: null,
-            title: null,
-            desc: null
+            icon: '',
+            title: '',
+            desc: '',
+            count: 0
         };
     },
 
@@ -19,19 +39,20 @@ var WDJAppCard = React.createClass({
             },
 
             dataType: "jsonp",
-            
+
             success: function(data){
                 return this.setState({
-                    icon: data.icons.px48,
+                    icon: data.icons.px68,
                     title: data.title,
-                    desc: data.description
+                    desc: data.description,
+                    count: data.downloadCountStr
                 });
             }.bind(this)
         });
 
     },
 
-/* getJSON version
+    /* getJSON version
 
     componentWillMount: function() {
 
@@ -51,7 +72,7 @@ var WDJAppCard = React.createClass({
 
     render: function(){
 
-        var desc = typeof this.state.desc;
+        var desc = this.state.desc.substr(0, 80) + ' ...';
         return (
             <div className="card">
 
@@ -61,8 +82,8 @@ var WDJAppCard = React.createClass({
                     </div>
                     <div className="title">{this.state.title}</div>
                 </div>
-                    <div className="description"><span dangerouslySetInnerHTML={{__html: desc}}/></div>
-                    <a href="javascript:void(0);" className="button install"><i></i><span>安装</span></a>
+                <div className="description"><span dangerouslySetInnerHTML={{__html: desc}}/></div>
+                <a href="javascript:void(0);" className="button install"><i></i><span>安装</span></a>
             </div>
         );
     }
