@@ -19,7 +19,7 @@ var WDJCardList = React.createClass({
 });
 
 var WDJAppCard = React.createClass({
-    getInitialState: function() {
+    getInitialState: function () {
         return {
             icon: '',
             title: '',
@@ -28,17 +28,11 @@ var WDJAppCard = React.createClass({
         };
     },
 
-    componentWillMount: function() {
+    componentWillMount: function () {
 
         $.ajax({
             url: 'http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName,
-            beforeSend: function(x) {
-                if(x && x.overrideMimeType) {
-                    x.overrideMimeType("application/j-son;charset=UTF-8");
-                }
-            },
-
-            dataType: "jsonp",
+            dataType: 'jsonp',
 
             success: function(data){
                 return this.setState({
@@ -54,7 +48,7 @@ var WDJAppCard = React.createClass({
 
     /* getJSON version
 
-    componentWillMount: function() {
+    componentWillMount: function () {
 
         var url='http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName;
 
@@ -70,7 +64,7 @@ var WDJAppCard = React.createClass({
 
     },*/
 
-    render: function(){
+    render: function (){
 
         var desc = this.state.desc.substr(0, 80) + ' ...';
         return (
