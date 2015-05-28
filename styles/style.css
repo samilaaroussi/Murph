@@ -73,9 +73,16 @@ html.loading,html.loading body {
   overflow: hidden;
 }
 
+html, body {
+    position: relative;
+    height: 100%;
+}
+
 body {
   text-shadow: 0 1px 0 rgba(255,255,255,.4);
   position: relative;
+  margin: 0;
+  padding: 0;
   background-color: #F4F4F4 ;
   background-attachment: fixed;
   font-family: "Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -570,7 +577,7 @@ body {
 @media screen and (min-width:300px) {
   body {
     background: #F4F4F4;
-    background-size: 600px;
+    //background-size: 600px;
   }
 
   .header a.logo {
@@ -1165,4 +1172,28 @@ a.button span {
     position: relative;
     width: 100%;
     height: 100%
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: none;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
 }

@@ -4,11 +4,15 @@ var WDJCardList = React.createClass({
             <ul>
 
                 {this.props.dataValue.map(function (item) {
-                    if(typeof item == 'string'){
+                    if (typeof item == 'string'){
                         return <li><WDJAppCard packageName={item}/></li>;
                     }
 
-                    else if(typeof item == 'object'){
+                    else if (Array.isArray(item)){
+
+                        return <li><WDJAppCard packageName={item[0].packageName || ''} icon={item[0].icon | ''} title={item[0].title | ''} desc={item[0].desc | ''}/></li>;
+                    }
+                    else if (typeof item == 'object'){
                         return <li>{item}</li>;
                     }
 
@@ -46,38 +50,42 @@ var WDJAppCard = React.createClass({
 
     },
 
-    /* getJSON version
+    handleClick: function() {
 
-    componentWillMount: function () {
+        if(campaignTools.isInstalled(this.props.packageName)){
 
-        var url='http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName;
+            campaignTools.openApp(this.props.packageName);
+        }
 
-        $.getJSON(url + '?callback=?', (function(data) {
-
-            return this.setState({
-                icon: data.icons.px48,
-                title: data.title,
-                desc: data.description
-            });
-
-        }).bind(this));
-
-    },*/
+        else{
+            campaignTools.installApp(this.props.packageName);
+        }
+    },
 
     render: function (){
 
-        var desc = this.state.desc.substr(0, 80) + ' ...';
+        /*if(campaignTools.isInstalled(this.props.packageName)){
+
+            var btn = '开放';
+        }
+
+        else{
+            var btn = '安装';
+        }*/
+
+        var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
+
         return (
             <div className="card">
 
-                <div className='view-detail' href='javascript:void(0);' target='_default'>
+                <div className='view-detail'>
                     <div className="icon">
-                        <img src={this.state.icon} alt={this.state.title} />
+                        <img src={this.props.icon || this.state.icon} alt={this.props.title || this.state.title} />
                     </div>
-                    <div className="title">{this.state.title}</div>
+                    <div className="title">{this.props.title || this.state.title}</div>
                 </div>
                 <div className="description"><span dangerouslySetInnerHTML={{__html: desc}}/></div>
-                <a href="javascript:void(0);" className="button install"><i></i><span>安装</span></a>
+                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>开放</span></a>
             </div>
         );
     }
