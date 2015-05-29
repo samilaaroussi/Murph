@@ -1,19 +1,21 @@
 var WDJCardList = React.createClass({
-    
+
     render: function () {
+
+        var cardList = this.props.dataValue.map(function (item) {
+            if (typeof item == 'string') {
+                return <li><WDJAppCard packageName={item}/></li>;
+            }
+
+            else if (typeof item == 'object') {
+                return <li>{item}</li>;
+            }
+
+        });
+
         return (
             <ul>
-
-                {this.props.dataValue.map(function (item) {
-                    if (typeof item == 'string'){
-                        return <li><WDJAppCard packageName={item}/></li>;
-                    }
-
-                    else if (typeof item == 'object'){
-                        return <li>{item}</li>;
-                    }
-
-                })}
+                {cardList}
             </ul>
         );
     }
