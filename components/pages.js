@@ -26,11 +26,11 @@ var Pages = React.createClass({
     render: function () {
         return (
 
-                <div className={"swiper-container swiper-container-" + this.props.dir}>
-                    <div className="swiper-wrapper">
-                        {this.props.children}
-                    </div>
+            <div className={"swiper-container swiper-container-" + this.props.dir}>
+                <div className="swiper-wrapper">
+                    {this.props.children}
                 </div>
+            </div>
 
         );
     }

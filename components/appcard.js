@@ -1,4 +1,5 @@
 var WDJCardList = React.createClass({
+    
     render: function () {
         return (
             <ul>
@@ -8,10 +9,6 @@ var WDJCardList = React.createClass({
                         return <li><WDJAppCard packageName={item}/></li>;
                     }
 
-                    else if (Array.isArray(item)){
-
-                        return <li><WDJAppCard packageName={item[0].packageName || ''} icon={item[0].icon | ''} title={item[0].title | ''} desc={item[0].desc | ''}/></li>;
-                    }
                     else if (typeof item == 'object'){
                         return <li>{item}</li>;
                     }
@@ -52,13 +49,14 @@ var WDJAppCard = React.createClass({
 
     handleClick: function() {
 
-        if(campaignTools.isInstalled(this.props.packageName)){
+        if (campaignTools.isInstalled(this.props.packageName)){
 
             campaignTools.openApp(this.props.packageName);
-        }
 
-        else{
+        } else{
+
             campaignTools.installApp(this.props.packageName);
+
         }
     },
 
@@ -84,8 +82,8 @@ var WDJAppCard = React.createClass({
                     </div>
                     <div className="title">{this.props.title || this.state.title}</div>
                 </div>
-                <div className="description"><span dangerouslySetInnerHTML={{__html: desc}}/></div>
-                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>开放</span></a>
+                <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
+                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>打开</span></a>
             </div>
         );
     }
