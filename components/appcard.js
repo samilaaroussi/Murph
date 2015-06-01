@@ -1,21 +1,20 @@
 var WDJCardList = React.createClass({
-
+    
     render: function () {
-
-        var cardList = this.props.dataValue.map(function (item) {
-            if (typeof item == 'string') {
-                return <li><WDJAppCard packageName={item}/></li>;
-            }
-
-            else if (typeof item == 'object') {
-                return <li>{item}</li>;
-            }
-
-        });
 
         return (
             <ul>
-                {cardList}
+                {this.props.dataValue.map(function (item) {
+                    if (typeof item == 'string'){
+                        return <li><WDJAppCard packageName={item}/></li>;
+                    }
+
+                    else if (typeof item == 'object') {
+                        return <li>{item}</li>;
+                    }
+
+                })}
+
             </ul>
         );
     }
@@ -49,17 +48,25 @@ var WDJAppCard = React.createClass({
 
     },
 
-    handleClick: function() {
+    handleClick: function(event) {
 
-        if (campaignTools.isInstalled(this.props.packageName)){
+        if(device.isP4) {
 
-            campaignTools.openApp(this.props.packageName);
+            if(campaignTools.isInstalled) {
 
-        } else{
+                campaignTools.openApp(this.props.packageName);
+            
+            } else {
 
-            campaignTools.installApp(this.props.packageName);
+                campaignTools.installApp(this.props.packageName);
+            
+            }
+        } else {
 
+            window.open('http://www.wandoujia.com/apps/' + this.props.packageName)
         }
+
+
     },
 
     render: function (){

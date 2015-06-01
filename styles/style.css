@@ -1177,11 +1177,13 @@ a.button span {
 .swiper-container {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 .swiper-slide {
+    height: 100%;
+    position: relative;
     text-align: center;
     font-size: 18px;
-    background: none;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -1196,4 +1198,16 @@ a.button span {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+
+.swiper-wrapper {
+
+  height: 100%;
+  position: relative;
+}
+
+.swiper-main {
+
+  height: 100%;
+  position: relative;
 }

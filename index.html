@@ -12,10 +12,13 @@
 
 <body>
 
+<div id="content"></div>
+
     <script src="build/react.js"></script>
     <script src="build/JSXTransformer.js"></script>
     <script src="build/katana.js"></script>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
     <script> 
 
         var fullList = null;
@@ -77,28 +80,27 @@
                     </Page>
 
                     <Page>
-                    <WDJQRCode content="Hello World !" size="8"/>
+                        <WDJQRCode content="Hello World !" size="8"/>
 
-                    <div className="share-buttons-wrap">
-                        <div className="share-buttons">
-                            <b>分享到：</b>
+                        <div className="share-buttons-wrap">
+                            <div className="share-buttons">
+                                <b>分享到：</b>
 
-                            <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg" desc="Weibo description example"/>
-                            <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
-                            <WDJShareMoments url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
+                                <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg" desc="Weibo description example"/>
+                                <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
+                                <WDJShareMoments url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
 
+                            </div>
                         </div>
-                    </div>
-
                     </Page>
 
                 </Pages>
                 
             </div>
-            , document.body);
+            , document.getElementById('content'));
 </script>
-
+</body>
     <!-- Swiper JS -->
     <script src="Swiper/dist/js/swiper.jquery.min.js"></script>
-</body>
+
 </html>
