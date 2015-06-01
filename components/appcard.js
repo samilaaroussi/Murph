@@ -1,25 +1,3 @@
-var WDJCardList = React.createClass({
-    
-    render: function () {
-
-        return (
-            <ul>
-                {this.props.dataValue.map(function (item) {
-                    if (typeof item == 'string'){
-                        return <li><WDJAppCard packageName={item}/></li>;
-                    }
-
-                    else if (typeof item == 'object') {
-                        return <li>{item}</li>;
-                    }
-
-                })}
-
-            </ul>
-        );
-    }
-});
-
 var WDJAppCard = React.createClass({
     getInitialState: function () {
         return {
@@ -36,7 +14,7 @@ var WDJAppCard = React.createClass({
             url: 'http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName,
             dataType: 'jsonp',
 
-            success: function(data){
+            success: function(data) {
                 return this.setState({
                     icon: data.icons.px68,
                     title: data.title,
@@ -52,7 +30,7 @@ var WDJAppCard = React.createClass({
 
         if(device.isP4) {
 
-            if(campaignTools.isInstalled) {
+            if(campaignTools.isInstalled(this.props.packageName)) {
 
                 campaignTools.openApp(this.props.packageName);
             
@@ -92,7 +70,7 @@ var WDJAppCard = React.createClass({
                     <div className="title">{this.props.title || this.state.title}</div>
                 </div>
                 <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
-                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>打开</span></a>
+                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>安装</span></a>
             </div>
         );
     }
