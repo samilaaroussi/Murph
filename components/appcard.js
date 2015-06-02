@@ -32,10 +32,12 @@ var WDJAppCard = React.createClass({
 
             if (campaignTools.isInstalled(this.props.packageName)) {
 
+                var btn = '开放';
                 campaignTools.openApp(this.props.packageName);
             
             } else {
 
+                var btn = '安装';
                 campaignTools.installApp(this.props.packageName);
             
             }
@@ -45,6 +47,25 @@ var WDJAppCard = React.createClass({
         }
 
 
+    },
+
+    button: function () {
+
+        if (device.isP4) {
+
+            if (campaignTools.isInstalled(this.props.packageName)) {
+
+                return '开放';
+            
+            } else {
+
+                return '安装';
+            
+            }
+        } else {
+
+            return '安装';
+        }
     },
 
     render: function () {
@@ -61,7 +82,7 @@ var WDJAppCard = React.createClass({
                     <div className="title">{this.props.title || this.state.title}</div>
                 </div>
                 <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
-                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>安装</span></a>
+                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>{this.button()}</span></a>
             </div>
         );
     }
