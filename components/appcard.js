@@ -28,9 +28,9 @@ var WDJAppCard = React.createClass({
 
     handleClick: function(event) {
 
-        if(device.isP4) {
+        if (device.isP4) {
 
-            if(campaignTools.isInstalled(this.props.packageName)) {
+            if (campaignTools.isInstalled(this.props.packageName)) {
 
                 campaignTools.openApp(this.props.packageName);
             
@@ -47,16 +47,7 @@ var WDJAppCard = React.createClass({
 
     },
 
-    render: function (){
-
-        /*if(campaignTools.isInstalled(this.props.packageName)){
-
-            var btn = '开放';
-        }
-
-        else{
-            var btn = '安装';
-        }*/
+    render: function () {
 
         var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
 
