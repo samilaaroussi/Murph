@@ -32,15 +32,14 @@ var WDJAppCard = React.createClass({
 
             if (campaignTools.isInstalled(this.props.packageName)) {
 
-                var btn = '开放';
                 campaignTools.openApp(this.props.packageName);
             
             } else {
 
-                var btn = '安装';
                 campaignTools.installApp(this.props.packageName);
             
             }
+            
         } else {
 
             window.open('http://www.wandoujia.com/apps/' + this.props.packageName)
@@ -62,10 +61,9 @@ var WDJAppCard = React.createClass({
                 return '安装';
             
             }
-        } else {
-
-            return '安装';
         }
+
+        return '安装';
     },
 
     render: function () {
@@ -73,17 +71,16 @@ var WDJAppCard = React.createClass({
         var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
 
         return (
-            <div className="card">
-
-                <div className='view-detail'>
-                    <div className="icon">
-                        <img src={this.props.icon || this.state.icon} alt={this.props.title || this.state.title} />
+                <div className="card">
+                    <div className='view-detail'>
+                        <div className="icon">
+                            <img src={this.props.icon || this.state.icon} alt={this.props.title || this.state.title} />
+                        </div>
+                        <div className="title">{this.props.title || this.state.title}</div>
                     </div>
-                    <div className="title">{this.props.title || this.state.title}</div>
+                    <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
+                    <a href="#" onClick={this.handleClick} className="button install"><i></i><span>{this.button()}</span></a>
                 </div>
-                <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
-                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>{this.button()}</span></a>
-            </div>
         );
     }
 });

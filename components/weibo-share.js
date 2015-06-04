@@ -9,7 +9,6 @@ var WDJShareWeibo = React.createClass({
         if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')) {
             
             res = <a href="#" onClick={this.handleClick} alt={this.props.title} className={this.props.icon}><i></i></a>;
-            
             return res;
 
         } else {

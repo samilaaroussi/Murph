@@ -14,9 +14,7 @@ var Pages = React.createClass({
                 keyboardControl: 1,
                 spaceBetween: 0
             });
-        }
-
-        else { // Horizontal Page Direction by default
+        } else { // Horizontal Page Direction by default
 
             var swiperH = new Swiper('.swiper-container-h', {
                 pagination: '.swiper-pagination-h',
@@ -27,15 +25,6 @@ var Pages = React.createClass({
             });
 
         }
-
-        $(window).resize(function(){
-            var height = $(window).height();
-            var width  = $(window).width();
-            $('.swiper-container, .swiper-slide').height(height);
-            $('.swiper-container, .swiper-slide').width(width);
-
-        })
-        $(window).resize();
 
     },
 

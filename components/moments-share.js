@@ -10,13 +10,19 @@ var WDJShareMoments = React.createClass({
         
         if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
             
-            return <a href="#" onClick={this.handleClick} alt={this.props.title} className={this.props.icon}><i></i></a>;
+            res = <div><a href="#" onClick={this.handleClick} alt={this.props.title} className={this.props.icon}><i></i></a></div>;
           
         } else {
             
-            return <a href={'http://www.wandoujia.com/qr?c=' + this.props.url} className={this.props.icon} alt={this.props.title}><i></i></a>;
+              res = <div>
+                        <WDJModal title={this.props.title}>
+                            <WDJQRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
+                        </WDJModal>
+                        <a href='#openModal' className={this.props.icon} alt={this.props.title}><i></i></a>
+                    </div>;
         
         }
 
+        return res;
     }
 });

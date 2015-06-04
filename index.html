@@ -12,8 +12,6 @@
 
 <body>
 
-    <div id="content"></div>
-
     <script src="build/react.js"></script>
     <script src="build/JSXTransformer.js"></script>
     <script src="build/katana.js"></script>
@@ -59,52 +57,53 @@
     <script type="text/jsx" src="components/moments-share.js"></script>
     <script type="text/jsx" src="components/page.js"></script>
     <script type="text/jsx" src="components/pages.js"></script>
+    <script type="text/jsx" src="components/modal.js"></script>
 
     <script type="text/jsx"> 
         React.render(
-            <div className="content">
 
-                <Pages dir="h">
-                    <Page>
-                        <WDJCardList dataValue={["vstudio.android.camera360", "com.tencent.mm"]}/>
-                    </Page>
-
-                    <Page>
-                        <Pages dir="v">
-                            <Page>
-                                <WDJCardList dataValue={[<WDJAppCard packageName="com.xiudang.jiukuaiyou.ui"/>, <WDJAppCard packageName="com.youku.phone"/>]}/>
-
-
-                            </Page>
-                            <Page>
+            <Pages dir="h">
+                <Page>
+                    <WDJCardList dataValue={["vstudio.android.camera360", "com.tencent.mm"]}/>
+                </Page>
+                <Page>
+                    <WDJCardList dataValue={[{"packageName": "vstudio.android", "title": "Title", "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."}]}/>
+                </Page>
+                <Page>
+                    <Pages dir="v">
+                        <Page>
+                            <WDJCardList dataValue={[<WDJAppCard packageName="com.xiudang.jiukuaiyou.ui"/>, <WDJAppCard packageName="com.youku.phone"/>]}/>
+                        </Page>
+                        <Page>
                             <WDJCardList>
                                 <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
 
                                 <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title 2" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
-                                </WDJCardList>
-                            </Page>
-                        </Pages>
-                    </Page>
+                            </WDJCardList>
+                        </Page>
+                    </Pages>
+                </Page>
 
-                    <Page>
-                        <WDJQRCode content="Hello World !" size="8"/>
+                <Page>
 
-                        <div className="share-buttons-wrap">
-                            <div className="share-buttons">
-                                <b>分享到：</b>
+                    <WDJModal title="Modal Btn">
+                        <WDJQRCode content="Hello World !" size="9"/>
+                    </WDJModal>
+                    <div className="share-buttons-wrap">
+                        <div className="share-buttons">
+                            <b>分享到：</b>
 
-                                <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg" desc="Weibo description example"/>
-                                <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
-                                <WDJShareMoments url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
+                            <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg" desc="Weibo description example"/>
+                            <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
+                            <WDJShareMoments url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
 
-                            </div>
                         </div>
-                    </Page>
+                    </div>
+                </Page>
 
-                </Pages>
-                
-            </div>
-            , document.getElementById('content'));
+            </Pages>
+
+            , document.body);
 </script>
 </body>
     <!-- Swiper JS -->

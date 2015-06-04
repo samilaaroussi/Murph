@@ -14,8 +14,12 @@ var WDJShareWechat = React.createClass({
             
         } else {
             
-            res = <a href={'http://www.wandoujia.com/qr?c=' + this.props.url} className={this.props.icon} alt={this.props.title}><i></i></a>;
-        
+            res = <div>
+                      <WDJModal title={this.props.title}>
+                          <WDJQRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
+                      </WDJModal>
+                      <a href='#openModal' className={this.props.icon} alt={this.props.title}><i></i></a>
+                  </div>;
         }
 
         return res;
