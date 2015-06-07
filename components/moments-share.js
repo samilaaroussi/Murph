@@ -1,7 +1,10 @@
 var WDJShareMoments = React.createClass({
 
     handleClick: function() {
-        campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT_TIMELINE');
+
+        var runApp = campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT_TIMELINE');   
+        <a href="#" onClick={runApp} alt={this.props.title} className={this.props.icon}><i></i></a>
+    
     },
 
     render: function() {
@@ -10,11 +13,11 @@ var WDJShareMoments = React.createClass({
         
         if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
             
-            res = <div><a href="#" onClick={this.handleClick} alt={this.props.title} className={this.props.icon}><i></i></a></div>;
+            res = this.HandClick;
           
         } else {
             
-              res = <div>
+              res = <div className="modal-button">
                         <WDJModal title={this.props.title}>
                             <WDJQRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
                         </WDJModal>

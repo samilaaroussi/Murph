@@ -722,7 +722,7 @@ body {
     background-repeat: no-repeat
 }
 .card-wrap {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 50%;
     margin-top: -240px
@@ -948,7 +948,6 @@ a.button span {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     padding: 5px;
-    background: #fff;
     line-height: 1
 }
 .share-buttons span {
@@ -1003,7 +1002,6 @@ a.button span {
     }
 }
 .share-buttons .share-wechat-timeline {
-    display: none;
     margin: 0 5px;
     background: #78c83d
 }
@@ -1261,7 +1259,19 @@ a.button span {
     background: #333;
 }
 
-.inline-share {
+.modal-button {
 
-  display: inline;
+    display: inline-block;
+}
+
+video {
+    width: 80%    !important;
+    height: auto   !important;
+}
+
+iframe {
+    display:block; /* force the iframe to display as block */   
+    height:100%; /* assign 100% height */
+    width: 100%;
+    border:none;
 }
