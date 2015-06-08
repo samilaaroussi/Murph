@@ -3,12 +3,12 @@ var WDJModal = React.createClass({
     render: function () {
 
         return (
-
-                <LightboxModal>
-                    <div>
+                <div id="openModal" className="modalDialog">
+                    <div className="container">
+                        <a href="#close" title="Close" className="close">X</a>
                         {this.props.children}
                     </div>
-                </LightboxModal>  
+                </div>
 
         );
     }

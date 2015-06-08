@@ -8,12 +8,12 @@ var WDJShareWeibo = React.createClass({
 
         if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')) {
             
-            res = <a href="#" onClick={this.handleClick} alt={this.props.title} className={this.props.icon}><i></i></a>;
+            res = <div className="modal-button"><a href="#" onClick={this.handleClick} alt={this.props.title} className={this.props.icon}><i></i></a></div>;
             return res;
 
         } else {
             
-            res = <a href={'http://service.weibo.com/share/share.php?url=' + this.props.url + '&appkey=&title=' + this.props.title +'&pic=' + this.props.pic + '&ralateUid=&language=zh_cn'} alt={this.props.title} className={this.props.icon}><i></i></a>;
+            res = <div className="modal-button"><a href={'http://service.weibo.com/share/share.php?url=' + this.props.url + '&appkey=&title=' + this.props.title +'&pic=' + this.props.pic + '&ralateUid=&language=zh_cn'} alt={this.props.title} className={this.props.icon}><i></i></a></div>;
             return res;
         }
 
