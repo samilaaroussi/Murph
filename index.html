@@ -16,6 +16,7 @@
     <script src="build/JSXTransformer.js"></script>
     <script src="build/katana.js"></script>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/jsx" src='build/react-lightbox.jsx'></script>
 
     <script> 
 
@@ -59,59 +60,18 @@
     <script type="text/jsx" src="components/pages.js"></script>
     <script type="text/jsx" src="components/modal.js"></script>
     <script type="text/jsx" src="components/video.js"></script>
+    <script type="text/jsx" src="app.js"></script>
 
     <script type="text/jsx"> 
         React.render(
 
-            <Pages dir="v">
-                <Page> 
-                    <WDJCardList dataValue={["vstudio.android.camera360", "com.tencent.mm"]}/>
-                </Page>
-                <Page>
-                    <WDJCardList dataValue={[{"packageName": "com.tencent.mm", "title": "Title", "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.", "icon": "http://img.wdjimg.com/mms/icon/v1/6/4b/b042c654d30b359fde8a13bad29534b6_68_68.png"}]}/>
-                </Page>
-
-                <Page>
-                    <Pages dir="h">
-                        <Page>
-                            <WDJCardList dataValue={[<WDJAppCard packageName="com.xiudang.jiukuaiyou.ui"/>, <WDJAppCard packageName="com.youku.phone"/>]}/>
-                        </Page>
-                        <Page>
-                            <WDJCardList>
-                                <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
-
-                                <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title 2" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
-                            </WDJCardList>
-                        </Page>
-                        <Page>
-                            <WDJVideo type="intern" mp4Url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-                                         oggUrl="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv"/>
-                        </Page>
-
-                        <Page>
-                            <WDJVideo type="youku" id="XMTI1NTgyMTI4OA"/>
-                        </Page>
-                    </Pages>
-                </Page>
-                <Page>
-                    <div className="share-buttons-wrap">
-                        <div className="share-buttons">
-                            <b>分享到：</b>
-
-                            <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg" desc="Weibo description example"/>
-                            <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
-                            <WDJShareMoments url="http://example.com" icon="share-wechat-timeline" title="Moments Share" desc="Moments description example"/>
-
-                        </div>
-                    </div>
-                </Page>
-
-            </Pages>
+            <WDJApp/>
 
             , document.body);
-</script>
+    </script>
+
 </body>
-    <!-- Swiper JS -->
+
     <script src="Swiper/dist/js/swiper.jquery.min.js"></script>
 
 </html>

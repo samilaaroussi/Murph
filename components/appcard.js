@@ -4,7 +4,8 @@ var WDJAppCard = React.createClass({
             icon: '',
             title: '',
             desc: '',
-            count: 0
+            count: 0,
+            isInstalled: false
         };
     },
 
@@ -24,62 +25,80 @@ var WDJAppCard = React.createClass({
             }.bind(this)
         });
 
-    },
-
-    handleClick: function(event) {
-
         if (device.isP4) {
 
             if (campaignTools.isInstalled(this.props.packageName)) {
 
-                campaignTools.openApp(this.props.packageName);
-            
-            } else {
+               this.state.isInstalled = true;
 
-                campaignTools.installApp(this.props.packageName);
-            
-            }
+           } else {
+
+               this.state.isInstalled = false;
+
+           }
+           
+       } else {
+
+           this.state.isInstalled = false;
+       }
+
+
+   },
+
+   handleClick: function(event) {
+
+    if (device.isP4) {
+
+        if (this.state.isInstalled == true) {
+
+            campaignTools.openApp(this.props.packageName);
             
         } else {
 
-            window.open('http://www.wandoujia.com/apps/' + this.props.packageName)
-        }
-
-
-    },
-
-    getInstalledBtnName: function () {
-
-        if (device.isP4) {
-
-            if (campaignTools.isInstalled(this.props.packageName)) {
-
-                return '开放';
+            campaignTools.installApp(this.props.packageName);
             
-            }
+        }
+        
+    } else {
 
-            return '安装';
+        window.open('http://www.wandoujia.com/apps/' + this.props.packageName)
+    }
 
+
+},
+
+getInstallStateText: function () {
+
+    if (device.isP4) {
+
+        if (this.state.isInstalled == true) {
+
+            return '开放';
+            
         }
 
         return '安装';
-    },
 
-    render: function () {
-
-        var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
-
-        return (
-            <div className="card">
-                <div className='view-detail'>
-                    <div className="icon">
-                        <img src={this.props.icon || this.state.icon} alt={this.props.title || this.state.title} />
-                    </div>
-                    <div className="title">{this.props.title || this.state.title}</div>
-                </div>
-                <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
-                <a href="#" onClick={this.handleClick} className="button install"><i></i><span>{this.getInstalledBtnName()}</span></a>
-            </div>
-        );
     }
+
+    return '安装';
+},
+
+render: function () {
+
+    var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
+
+    return (
+        <div className="card">
+        <div className='view-detail'>
+        <div className="icon">
+        <img src={this.props.icon || this.state.icon} alt={this.props.title || this.state.title} />
+        </div>
+        <div className="title">{this.props.title || this.state.title}</div>
+        </div>
+        <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
+        <a href="#" onClick={this.handleClick} className="button install"><i></i><span>{this.getInstallStateText()}</span></a>
+        </div>
+        );
+}
 });

@@ -1,17 +1,14 @@
 var WDJShareWeibo = React.createClass({
 
     handleClick: function() {
-
-        var runApp = campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'SINA_WEIBO');  
-        <a href="#" onClick={runApp} alt={this.props.title} className={this.props.icon}><i></i></a>
-    
+        campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'SINA_WEIBO');
     },
 
     render: function() {
 
         if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')) {
             
-            res = this.HandClick;
+            res = <a href="#" onClick={this.handleClick} alt={this.props.title} className={this.props.icon}><i></i></a>;
             return res;
 
         } else {
