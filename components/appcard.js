@@ -1,4 +1,5 @@
 var WDJAppCard = React.createClass({
+
     getInitialState: function () {
         return {
             icon: '',
@@ -29,15 +30,15 @@ var WDJAppCard = React.createClass({
 
             if (campaignTools.isInstalled(this.props.packageName)) {
 
-               this.state.isInstalled = true;
+                this.state.isInstalled = true;
 
-           }
+            }
            
-       }
+        }
 
-   },
+    },
 
-   handleClick: function(event) {
+    handleClick: function(event) {
 
         if (device.isP4) {
 
@@ -55,7 +56,6 @@ var WDJAppCard = React.createClass({
 
             window.open('http://www.wandoujia.com/apps/' + this.props.packageName)
         }
-
 
     },
 
@@ -89,6 +89,6 @@ var WDJAppCard = React.createClass({
                 <div className="description" dangerouslySetInnerHTML={{__html: desc}}/>
                 <a href="#" onClick={this.handleClick} className="button install"><i></i><span>{this.getInstallStateText()}</span></a>
             </div>
-            );
+        );
     }
 });
