@@ -1,10 +1,9 @@
-var WDJQRcode = React.createClass({
+var WDJQRCode = React.createClass({
 
-	render: function(){
-		return (
-			<div className="qrcode">
-			<img src={'http://www.wandoujia.com/qr?c=' + this.props.content + '&s=' + this.props.size}/>
-			</div>
-		);
-	}
+    render: function(){
+        
+        return (
+            <img src={'http://www.wandoujia.com/qr?c=' + this.props.content + '&s=' + this.props.size}/>
+        );
+    }
 });

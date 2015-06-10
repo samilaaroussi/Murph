@@ -1,38 +1,11 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
 html {
   line-height: 1;
 }
 
 ol,ul {
   list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption,td,th {
-  text-align: left;
-  font-weight: 400;
-  vertical-align: middle;
-}
-
-blockquote,q {
-  quotes: none;
-}
-
-blockquote:after,blockquote:before,q:after,q:before {
-  content: "";
-  content: none;
+  margin:0;
+  padding: 0;
 }
 
 a img {
@@ -41,209 +14,6 @@ a img {
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
   display: block;
-}
-
-@-webkit-keyframes bounce {
-  100% {
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-}
-
-@-moz-keyframes bounce {
-  100% {
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-}
-
-@-ms-keyframes bounce {
-  100% {
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-}
-
-@-o-keyframes bounce {
-  100% {
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes bounce {
-  100% {
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-}
-
-.wdj-loader {
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -moz-transition: -moz-transform .3s ease-in;
-  -o-transition: -o-transform .3s ease-in;
-  -webkit-transition: -webkit-transform .3s ease-in;
-  transition: transform .3s ease-in;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  background: #f5f5f5;
-}
-
-.wdj-loader .wdj-loader-pea {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  margin: -90px 0 0 -60px;
-  text-align: center;
-  line-height: 120px;
-  font-size: 0;
-}
-
-.wdj-loader .wdj-loader-pea .loading-text {
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  margin-top: 10px;
-  line-height: 1;
-  font-size: 14px;
-  color: #666;
-}
-
-.wdj-loader .pea-wrap {
-  display: inline-block;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  position: relative;
-  width: 64px;
-  height: 68px;
-  margin: 10px 0 0 15px;
-  vertical-align: middle;
-}
-
-.wdj-loader .loader-icon {
-  display: inline-block;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  background-repeat: no-repeat;
-  background-image: url('http://static.wdjimg.com/www/images/www/voice2014/loader.png');
-  vertical-align: top;
-  overflow: hidden;
-}
-
-.wdj-loader .pod {
-  background-position: 0 -128px;
-  width: 64px;
-  height: 68px;
-}
-
-.wdj-loader .pea-left-bg {
-  -moz-animation: bounce .3s ease .1s infinite alternate;
-  -webkit-animation: bounce .3s ease .1s infinite alternate;
-  animation: bounce .3s ease .1s infinite alternate;
-  background-position: 0 0;
-  position: absolute;
-  left: 2px;
-  top: 42px;
-  width: 22px;
-  height: 22px;
-}
-
-.wdj-loader .pea-right-bg {
-  -moz-animation: bounce .3s ease .2s infinite alternate;
-  -webkit-animation: bounce .3s ease .2s infinite alternate;
-  animation: bounce .3s ease .2s infinite alternate;
-  background-position: 0 -60px;
-  position: absolute;
-  left: 16px;
-  top: 41px;
-  width: 26px;
-  height: 26px;
-}
-
-.wdj-loader .pea-left {
-  -moz-animation: bounce .3s ease .1s infinite alternate;
-  -webkit-animation: bounce .3s ease .1s infinite alternate;
-  animation: bounce .3s ease .1s infinite alternate;
-  background-position: 0 -32px;
-  position: absolute;
-  left: 4px;
-  top: 44px;
-  width: 18px;
-  height: 18px;
-}
-
-.wdj-loader .pea-right {
-  -moz-animation: bounce .3s ease .2s infinite alternate;
-  -webkit-animation: bounce .3s ease .2s infinite alternate;
-  animation: bounce .3s ease .2s infinite alternate;
-  background-position: 0 -96px;
-  position: absolute;
-  left: 18px;
-  top: 43px;
-  width: 22px;
-  height: 22px;
-}
-
-.wdj-loader.hide {
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-@media only screen and (min--moz-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:2 / 1),only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-device-pixel-ratio:2) {
-  .wdj-loader .loader-icon {
-    background-image: url('http://static.wdjimg.com/www/images/www/voice2014/loader@2x.png');
-  }
-
-  .wdj-loader .pod {
-    background-position: 0 -108px;
-    background-size: 64px 175px;
-  }
-
-  .wdj-loader .pea-left-bg {
-    background-position: 0 0;
-    background-size: 64px 175px;
-  }
-
-  .wdj-loader .pea-right-bg {
-    background-position: 0 -49px;
-    background-size: 64px 175px;
-    height: 26px;
-    width: 26px;
-  }
-
-  .wdj-loader .pea-left {
-    background-position: 0 -27px;
-    background-size: 64px 175px;
-  }
-
-  .wdj-loader .pea-right {
-    background-position: 0 -81px;
-    background-size: 64px 175px;
-  }
 }
 
 .container {
@@ -302,10 +72,17 @@ html.loading,html.loading body {
   overflow: hidden;
 }
 
+html, body {
+    position: relative;
+    height: 100%;
+}
+
 body {
   text-shadow: 0 1px 0 rgba(255,255,255,.4);
   position: relative;
-  background-color: #666 ;
+  margin: 0;
+  padding: 0;
+  background-color: #F4F4F4 ;
   background-attachment: fixed;
   font-family: "Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.78;
@@ -568,117 +345,6 @@ body {
   }
 }
 
-.android .apple-btn,.android .pc-btn {
-  display: none;
-}
-
-.android .android-btn {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-}
-
-.ios .android-btn,.ios .pc-btn {
-  display: none;
-}
-
-.ios .apple-btn {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-}
-
-.poem-list {
-  min-height: 400px;
-}
-
-.poem-list li {
-  position: relative;
-  max-width: 560px;
-  margin: 0 auto 10px;
-  padding: 10px 0;
-  overflow: hidden;
-}
-
-.poem-list li .title {
-  padding-bottom: 0;
-}
-
-.poem-list .info {
-  position: relative;
-  margin-left: 70px;
-  text-align: left;
-  line-height: 1;
-  z-index: 2;
-}
-
-.poem-list .info .title {
-  padding: 5px 0 10px;
-  text-align: left;
-  font-size: 18px;
-}
-
-.poem-list .info .spot {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 4px;
-  height: 4px;
-  background: #999;
-  margin: 0 5px 0 7px;
-}
-
-.poem-list .reader,.poem-list .reader-intro {
-  display: inline;
-  font-size: 12px;
-  line-height: 1.4;
-}
-
-.lyrics-wrap {
-  display: none;
-  height: 200px;
-}
-
-.lyrics-inner {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-}
-
-.lyrics-cont {
-  margin: 10px;
-}
-
-.playing .lyrics-wrap {
-  display: block;
-  margin-top: 76px;
-}
-
-.playing .info {
-  position: absolute;
-  top: 10px;
-}
-
-.playing .buffer,.playing .progress {
-  height: 86px;
-  cursor: default;
-}
-
-.playing .progress {
-  filter: alpha(Opacity=20);
-  opacity: .2;
-  background: #359f47;
-}
-
 .share {
   padding-bottom: 30px;
 }
@@ -909,8 +575,8 @@ body {
 
 @media screen and (min-width:300px) {
   body {
-    background: #666;
-    background-size: 600px;
+    background: #F4F4F4;
+    //background-size: 600px;
   }
 
   .header a.logo {
@@ -968,196 +634,6 @@ body {
   }
 }
 
-.zen-player {
-  width: 100%;
-  text-align: left;
-  margin-left: 10px;
-}
-
-.zen-player .player {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-
-.zen-player.play {
-  cursor: pointer;
-}
-
-.zen-player .button {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border: 0;
-  background: #359f47;
-  cursor: pointer;
-}
-
-.zen-player.play .button {
-  border-radius: 30px;
-}
-
-.zen-player .button .icon {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  width: 50px;
-  height: 50px;
-}
-
-.zen-player .button .icon.play {
-  background: url('http://static.wdjimg.com/www/images/www/tochild/play.png') no-repeat;
-  background-size: cover;
-}
-
-.zen-player .button .icon.pause {
-  background: url('http://static.wdjimg.com/www/images/www/tochild/pause.png') no-repeat;
-  background-size: cover;
-}
-
-.buffer,.progress {
-  filter: alpha(Opacity=50);
-  opacity: .5;
-  position: absolute;
-  height: 100%;
-  margin: -10px 0 -10px -10px;
-  background: #ddd;
-  z-index: 0;
-}
-
-.buffer {
-  background: #eee;
-}
-
-.loader {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background: #fff url('http://static.wdjimg.com/www/style/images/wdj/photosync/loading.gif') center center no-repeat;
-    z-index: 999
-}
-@media only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2 / 1),
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-device-pixel-ratio: 2) {
-    .loader {
-        background-size: 26px
-    }
-}
-.bg-list,
-.bg-list .bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0
-}
-.bg {
-    -moz-transition: opacity .6s ease 0s;
-    -o-transition: opacity .6s ease 0s;
-    -webkit-transition: opacity .6s ease;
-    -webkit-transition-delay: 0s;
-    transition: opacity .6s ease 0s;
-    display: none;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover
-}
-.bg.current {
-    display: block
-}
-@-webkit-keyframes fadeOutLeft {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-    50% {
-        -webkit-transform: translate3d(0, -5px, 0);
-        transform: translate3d(0, -5px, 0)
-    }
-    100% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-}
-@keyframes fadeOutLeft {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-    50% {
-        -webkit-transform: translate3d(0, -5px, 0);
-        transform: translate3d(0, -5px, 0)
-    }
-    100% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-}
-.fadeOutLeft {
-    -webkit-animation-name: fadeOutLeft;
-    animation-name: fadeOutLeft
-}
-.gesture {
-    -moz-transition: -moz-transform 1s ease 0s;
-    -o-transition: -o-transform 1s ease 0s;
-    -webkit-transition: -webkit-transform 1s ease;
-    -webkit-transition-delay: 0s;
-    transition: transform 1s ease 0s;
-    -moz-transform: translate3d(0px, 0, 0);
-    -ms-transform: translate3d(0px, 0, 0);
-    -webkit-transform: translate3d(0px, 0, 0);
-    transform: translate3d(0px, 0, 0);
-    -moz-animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -moz-animation-name: fadeOutLeft;
-    -webkit-animation-name: fadeOutLeft;
-    animation-name: fadeOutLeft;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    position: absolute;
-    bottom: 55px;
-    left: 0;
-    width: 100%;
-    z-index: 2
-}
-.gesture i {
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
-    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
-    background-position: 0 -119px;
-    background-repeat: no-repeat;
-    height: 25px;
-    overflow: hidden;
-    width: 40px;
-    margin: 0 auto
-}
-@media (-webkit-min-device-pixel-ratio: 2),
-(-o-min-device-pixel-ratio: 3 / 2),
-(min-device-pixel-ratio: 2) {
-    .gesture i {
-        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
-        background-position: 0 -105px;
-        background-size: 150px 505.5px;
-        height: 25px;
-        width: 40px
-    }
-}
 .cover {
     position: relative
 }
@@ -1246,55 +722,61 @@ only screen and (min-device-pixel-ratio: 2) {
     background-repeat: no-repeat
 }
 .card-wrap {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 50%;
     margin-top: -240px
 }
+
 .card {
     position: relative;
     z-index: 1;
     max-width: 275px;
-    margin: auto;
+    margin: 15px auto;
     padding: 10px;
     color: #333;
-    background: #fff
+    background: #fff;
+    box-shadow: 0px 1px 2px #D6D6D6
 }
-.card a.view-detail {
+.card .view-detail {
     display: block;
     text-decoration: none;
     overflow: hidden;
     padding-bottom: 10px
 }
 .card .icon {
-    -moz-border-radius: 14px;
-    -webkit-border-radius: 14px;
-    border-radius: 14px;
-    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 68px;
+    height: 68px;
     margin: 0 auto;
     overflow: hidden;
     float: left
 }
 .card .title {
-    padding: 12px 0;
-    font-size: 18px;
+    padding: 15px 0;
+    font-size: 17px;
     line-height: 1;
-    font-weight: 700;
     color: #333;
+    float: left;
+    margin-left: 10px
+}
+.card .count {
+
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1;
+    color: #999;
     float: left;
     margin-left: 10px
 }
 .card .description {
     font-size: 12px;
+    color: #666;
     line-height: 1.5
     padding-bottom: 0;
     padding-top: 10px;
-    border-top: 1px solid #eee
+    border-top: 1px solid #eee;
+    text-align: left;
 }
 .logo-card {
     padding: 20px 0
@@ -1324,9 +806,6 @@ only screen and (min-device-pixel-ratio: 2) {
     }
 }
 a.button {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
     display: block;
     width: 80px;
     height: 30px;
@@ -1434,10 +913,11 @@ a.button span {
 }
 .share-buttons-wrap {
     display: block;
-    position: absolute;
-    margin-top: -40px;
+    position:absolute;
+    position:relative;
+    //margin-top: -40px;
     right: 0;
-    bottom: 10px;
+    bottom: 0px;
     left: 0;
     z-index: 3
 }
@@ -1451,6 +931,8 @@ a.button span {
     color: #fff;
     line-height: 38px;
     vertical-align: bottom
+
+
 }
 .share-buttons a,
 .share-buttons i {
@@ -1466,7 +948,6 @@ a.button span {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     padding: 5px;
-    background: #fff;
     line-height: 1
 }
 .share-buttons span {
@@ -1521,7 +1002,6 @@ a.button span {
     }
 }
 .share-buttons .share-wechat-timeline {
-    display: none;
     margin: 0 5px;
     background: #78c83d
 }
@@ -1544,29 +1024,8 @@ a.button span {
         width: 25px
     }
 }
-.share-buttons .share-douban {
-    margin: 0 5px;
-    background: #54a73d
-}
-.share-buttons .share-douban i {
-    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
-    background-position: 0 -84px;
-    background-repeat: no-repeat;
-    height: 25px;
-    overflow: hidden;
-    width: 25px
-}
-@media (-webkit-min-device-pixel-ratio: 2),
-(-o-min-device-pixel-ratio: 3 / 2),
-(min-device-pixel-ratio: 2) {
-    .share-buttons .share-douban i {
-        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
-        background-position: 0 -75px;
-        background-size: 150px 505.5px;
-        height: 25px;
-        width: 25px
-    }
-}
+
+
 .p4 .share-wechat-timeline {
     display: inline-block;
     vertical-align: middle;
@@ -1661,196 +1120,12 @@ a.button span {
     font-size: 12px;
     background: #fff
 }
-.wechat-share-wrap .arrow-wechat {
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
-    background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png');
-    background-position: 0 -26px;
-    background-repeat: no-repeat;
-    height: 48px;
-    overflow: hidden;
-    width: 145px;
-    float: right;
-    margin-right: 20px
-}
-@media (-webkit-min-device-pixel-ratio: 2),
-(-o-min-device-pixel-ratio: 3 / 2),
-(min-device-pixel-ratio: 2) {
-    .wechat-share-wrap .arrow-wechat {
-        background-image: url('http://static.wdjimg.com/www/images/campaign/designaward2014/2x-s5dfacd013c.png');
-        background-position: 0 -21px;
-        background-size: 150px 505.5px;
-        height: 48.5px;
-        width: 146.5px
-    }
-}
+
 .wechat-share-wrap p {
     padding-top: 10px;
     clear: both
 }
-@media screen and (min-width: 290px) {
-    body,
-    html {
-        height: 100%
-    }
-    .card-1 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-1.png')
-    }
-    .card-2 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-2.png')
-    }
-    .card-3 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-3.png')
-    }
-    .card-4 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-4.png')
-    }
-    .card-5 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-5.png')
-    }
-    .card-6 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-6.png')
-    }
-    .card-7 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-7.png')
-    }
-}
-@media only screen and (min-width: 290px) and (min--moz-device-pixel-ratio: 2),
-only screen and (min-width: 290px) and (-o-min-device-pixel-ratio: 2 / 1),
-only screen and (min-width: 290px) and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-width: 290px) and (min-device-pixel-ratio: 2) {
-    .slogan i {
-        background-size: 250px
-    }
-    .card-1 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-1@2x.png')
-    }
-    .card-2 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-2@2x.png')
-    }
-    .card-3 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-3@2x.png')
-    }
-    .card-4 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-4@2x.png')
-    }
-    .card-5 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-5@2x.png')
-    }
-    .card-6 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-6@2x.png')
-    }
-    .card-7 .slogan i {
-        background-image: url('http://static.wdjimg.com/www/images/www/designaward2014/title-7@2x.png')
-    }
-}
-.orientation {
-    filter: alpha(Opacity=90);
-    opacity: .9;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #FE7472;
-    z-index: 2
-}
-.orientation p {
-    font-size: 14px;
-    padding: 5px 0;
-    color: #fff
-}
-html.landscape {
-    height: 100%;
-    overflow: hidden
-}
-.landscape .orientation {
-    display: block
-}
-.pc.landscape .orientation {
-    display: none
-}
-@media screen and (orientation: landscape),
-screen and (-moz-orientation: landscape),
-screen and (-o-orientation: landscape),
-screen and (-webkit-orientation: landscape) {
-    .orientation {
-        display: block
-    }
-    .pc .orientation {
-        display: none
-    }
-}
-.smallHeight body {
-    min-height: initial
-}
-.smallHeight .cover-inner {
-    margin-top: -210px
-}
-.smallHeight .logo-cover {
-    -moz-transform: scale(0.65);
-    -ms-transform: scale(0.65);
-    -webkit-transform: scale(0.65);
-    transform: scale(0.65);
-    margin-bottom: 0
-}
-.smallHeight .wdj-logo {
-    margin-top: -20px
-}
-.smallHeight .description {
-    padding-top: 0
-}
-.smallHeight .card-list-wrap {
-    margin-top: 0
-}
-.smallHeight .card-wrap {
-    margin-top: -170px
-}
-.smallHeight .logo-card {
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    margin-top: -25px;
-    padding-bottom: 10px
-}
-.smallHeight .slogan {
-    -moz-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    -webkit-transform: scale(0.7);
-    transform: scale(0.7);
-    margin-top: -16px
-}
-.smallHeight .card {
-    margin-top: -7px
-}
-.smallHeight .card a.view-detail {
-    overflow: hidden;
-    padding-bottom: 10px
-}
-.smallHeight .card .icon {
-    float: left
-}
-.smallHeight .card .title {
-    float: left;
-    margin-left: 10px
-}
-.smallHeight .card .description {
-    padding-bottom: 0;
-    padding-top: 10px;
-    border-top: 1px solid #eee
-}
-.smallHeight .card .install {
-    position: absolute;
-    top: 18px;
-    right: 10px
-}
-.smallHeight .share-buttons-wrap {
-    bottom: 10px
-}
+
 .card-list-wrap {
     -moz-backface-visibility: "hidden";
     -webkit-backface-visibility: "hidden";
@@ -1885,33 +1160,118 @@ screen and (-webkit-orientation: landscape) {
     -moz-box-sizing: content-box;
     box-sizing: content-box
 }
-.swiper-free-mode>.card-list {
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    margin: 0 auto
-}
-.slide {
-    position: relative;
-    float: left;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box
-}
-.swiper-wp8-horizontal {
-    -ms-touch-action: pan-y
-}
-.swiper-wp8-vertical {
-    -ms-touch-action: pan-x
-}
+
 .card-list-wrap {
+    position: relative;
     width: 100%;
-    height: 100%
 }
 .card-list {
     position: relative;
     width: 100%;
     height: 100%
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.swiper-slide {
+    height: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+
+  height: 100%;
+  position: relative;
+}
+
+.swiper-main {
+
+  height: 100%;
+  position: relative;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    max-width: 300px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px;
+    border-radius: 5px;
+    background: #fff;
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -11px;
+    text-align: center;
+    top: -11px;
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #333;
+}
+
+.modal-button {
+
+    display: inline-block;
+}
+
+video {
+    width: 80%    !important;
+    height: auto   !important;
+}
+
+iframe {
+    display:block; /* force the iframe to display as block */   
+    height:100%; /* assign 100% height */
+    width: 100%;
+    border:none;
 }

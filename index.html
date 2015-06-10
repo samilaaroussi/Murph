@@ -2,46 +2,76 @@
 <html lang="zh-cn">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Example Page</title>
+    <meta name="viewport" http-equiv="Content-Type" charset="UTF-8" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <title>Murph - Page Sample</title>
+
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
 </head>
 
 <body>
 
-    <div id="content"></div>
-    <div id="qrcode"></div>
-    <div id="footer"></div>
-
     <script src="build/react.js"></script>
     <script src="build/JSXTransformer.js"></script>
+    <script src="build/katana.js"></script>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/jsx" src='build/react-lightbox.jsx'></script>
+
+    <script> 
+
+        var fullList = null;
+        var pageData = null;
+        var shareData = null;
+        var shareDialogRendered = false;
+
+        var fullpageSwiper;
+        var cardListSwiper;
+        var mapSwiper;
+        var oldVersion = false;
+
+        var device = {};
+
+        device.isP4 = campaignTools.UA.inWdj;
+        device.isWechat = campaignTools.UA.inWechat;
+        device.isRetina = campaignTools.UA.isRetina;
+        device.isPC = campaignTools.inPC();
+        device.isAndroid = campaignTools.UA.inAndroid;
+
+        if (device.isP4) {
+            var versionName = campaignTools.getVersionName();
+            versionName = versionName.split('.');
+            if (versionName[0] < 4 || versionName[1] < 22) {
+                oldVersion = true;
+            }
+        }
+
+        var leftFlag = false;
+        var rightFlag = false;
+
+    </script>
     <script type="text/jsx" src="components/appcard.js"></script>
+    <script type="text/jsx" src="components/cardlist.js"></script>
     <script type="text/jsx" src="components/qrcode.js"></script>
     <script type="text/jsx" src="components/weibo-share.js"></script>
     <script type="text/jsx" src="components/wechat-share.js"></script>
     <script type="text/jsx" src="components/moments-share.js"></script>
+    <script type="text/jsx" src="components/page.js"></script>
+    <script type="text/jsx" src="components/pages.js"></script>
+    <script type="text/jsx" src="components/modal.js"></script>
+    <script type="text/jsx" src="components/video.js"></script>
+    <script type="text/jsx" src="app.js"></script>
 
     <script type="text/jsx"> 
-    React.render(
-        <div className='content'>
-            <WDJAppCard icon="http://www.yqdown.com/img2015/5/4/2015050450751221_APP.png"
-                        desc="榫卯（sǔn mǎo）－这是献给所有木头爱好者的情诗。你可以像玩游戏那般感受中国传统建筑、家具中那精妙绝伦的木质结构连接技艺，也能深刻体会到作者的独具匠心。"
-                        name="App Name"/>
+        React.render(
 
-            <WDJQRcode content="Hello World !"/>
-            <div className="share-buttons-wrap">
-                <div className="share-buttons">
-                    <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg"/>
+            <WDJApp/>
 
-                    <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share"/>
-                    <WDJShareMoments url="http://example.com" icon="share-wechat" title="Moments Share"/>
-                </div>
-            </div>
-
-        </div>
-        , document.getElementById('content'));
+            , document.body);
     </script>
 
 </body>
+
+    <script src="Swiper/dist/js/swiper.jquery.min.js"></script>
+
 </html>
