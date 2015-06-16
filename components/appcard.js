@@ -64,7 +64,7 @@ var WDJAppCard = React.createClass({
         if (device.isP4) {
 
             if (this.state.isInstalled) {
-
+    
                 return '打开';
                 
             }
