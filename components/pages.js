@@ -36,20 +36,22 @@ var Pages = React.createClass({
 
         var parallaxBg = null;
 
-        if (this.props.bg){
+        if (this.props.bg) {
+
             var divStyle = {backgroundImage:'url(' + this.props.bg +')'};
-            var parallaxBg = <div className="parallax-bg" style={divStyle} data-swiper-parallax="-23%"></div>
+            parallaxBg = <div className="parallax-bg" style={divStyle} data-swiper-parallax="-23%"></div>;
         }
 
         return (
             <div className={"swiper-container swiper-container-" + this.props.dir}>
+
                 {parallaxBg}
                 
                 <div className="swiper-wrapper">
                     {this.props.children}
                 </div>
 
-                <div className={"swiper-pagination swiper-pagination-white swiper-pagination-" + this.props.dir}></div>
+                <div className={"swiper-pagination-white swiper-pagination-" + this.props.dir}></div>
             </div>
 
         );
