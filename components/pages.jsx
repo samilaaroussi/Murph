@@ -1,3 +1,16 @@
+var pageStyle = StyleSheet.create({
+
+  parallaxBg: {
+      position: 'absolute',
+      left: '0',
+      top: '0',
+      width: '130%',
+      height: '100%',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+  }
+});
+
 var Pages = React.createClass({
 
     componentDidMount: function() {
@@ -31,29 +44,28 @@ var Pages = React.createClass({
 
     },
 
-
     render: function () {
 
-        var parallaxBg = null;
-
-        if (this.props.bg) {
-
+        if (this.props.bg){
             var divStyle = {backgroundImage:'url(' + this.props.bg +')'};
-            parallaxBg = <div className="parallax-bg" style={divStyle} data-swiper-parallax="-23%"></div>;
         }
 
         return (
             <div className={"swiper-container swiper-container-" + this.props.dir}>
-
-                {parallaxBg}
+                <div className={pageStyle.parallaxBg} style={divStyle} data-swiper-parallax="-23%">
+                </div>
                 
                 <div className="swiper-wrapper">
                     {this.props.children}
                 </div>
 
-                <div className={"swiper-pagination-white swiper-pagination-" + this.props.dir}></div>
+                <div className={"swiper-pagination swiper-pagination-white swiper-pagination-" + this.props.dir}></div>
             </div>
 
         );
     }
 });
+
+var pageStyleheet = document.createElement('style');
+pageStyleheet.textContent = StyleSheet.render();
+document.head.appendChild(pageStyleheet);

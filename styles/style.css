@@ -82,7 +82,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: #F4F4F4 ;
+  background-color: #999 ;
   background-attachment: fixed;
   font-family: "Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 1.78;
@@ -575,7 +575,7 @@ body {
 
 @media screen and (min-width:300px) {
   body {
-    background: #F4F4F4;
+    background: #eee ;
     //background-size: 600px;
   }
 
@@ -721,63 +721,7 @@ body {
     background-position: center bottom;
     background-repeat: no-repeat
 }
-.card-wrap {
-    position: relative;
-    width: 100%;
-    top: 50%;
-    margin-top: -240px
-}
 
-.card {
-    position: relative;
-    z-index: 1;
-    max-width: 275px;
-    margin: 15px auto;
-    padding: 10px;
-    color: #333;
-    background: #fff;
-    box-shadow: 0px 1px 2px #D6D6D6
-}
-.card .view-detail {
-    display: block;
-    text-decoration: none;
-    overflow: hidden;
-    padding-bottom: 10px
-}
-.card .icon {
-    display: block;
-    width: 68px;
-    height: 68px;
-    margin: 0 auto;
-    overflow: hidden;
-    float: left
-}
-.card .title {
-    padding: 15px 0;
-    font-size: 17px;
-    line-height: 1;
-    color: #333;
-    float: left;
-    margin-left: 10px
-}
-.card .count {
-
-    padding: 6px 0;
-    font-size: 12px;
-    line-height: 1;
-    color: #999;
-    float: left;
-    margin-left: 10px
-}
-.card .description {
-    font-size: 12px;
-    color: #666;
-    line-height: 1.5
-    padding-bottom: 0;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
-    text-align: left;
-}
 .logo-card {
     padding: 20px 0
 }
@@ -1161,16 +1105,6 @@ a.button span {
     box-sizing: content-box
 }
 
-.card-list-wrap {
-    position: relative;
-    width: 100%;
-}
-.card-list {
-    position: relative;
-    width: 100%;
-    height: 100%
-}
-
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -1257,11 +1191,6 @@ a.button span {
 }
 .close:hover {
     background: #333;
-}
-
-.modal-button {
-
-    display: inline-block;
 }
 
 video {

@@ -1,5 +1,16 @@
 var WDJModal = React.createClass({
 
+    componentDidMount: function() {
+
+      $(function () {
+          $('#element').on('click', function () {
+              $.fn.custombox( this );
+              return false;
+          });
+      });
+
+    },
+
     render: function () {
 
         return (

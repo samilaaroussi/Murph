@@ -2,7 +2,7 @@ var WDJApp = React.createClass({
 
     render: function () {
 
-        return <Pages dir="h" bg="http://bodywell.com.au/wp-content/uploads/revslider/home2/img-33.jpg">
+        return <Pages dir="v" bg="http://www.pixsterstudio.com/wp-content/uploads/2013/09/parallax_back1.jpg">
 
                     <Page>
                         <WDJCardList dataValue={[<WDJAppCard packageName="com.xiudang.jiukuaiyou.ui"/>, <WDJAppCard packageName="com.youku.phone"/>]}/>
@@ -16,7 +16,7 @@ var WDJApp = React.createClass({
                     </Page>
 
                     <Page>
-                        <Pages dir="v">
+                        <Pages dir="h">
                             <Page>
                                 <WDJVideo type="intern" mp4Url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
                                              oggUrl="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv"/>
