@@ -1,19 +1,3 @@
-var StyleSheet = window.stilr;
-
-var cardListStyle = StyleSheet.create({
-
-  cardListWrap: {
-      position: 'relative',
-      width: '100%'
-  },
-
-  cardList: {
-      position: 'relative',
-      width: '100%',
-      height: '100%'
-  }
-});
-
 var WDJCardList = React.createClass({
     
     render: function () {
@@ -21,8 +5,8 @@ var WDJCardList = React.createClass({
         if (!this.props.children) {
 
             return (
-                <div className={cardListStyle.cardListWrap}>
-                    <div className={cardListStyle.cardList}>
+                <div className="card-list-wrap">
+                    <div className="card-list">
                         {this.props.dataValue.map(function (item) {
                             if (typeof item == 'string') {
                                 
@@ -52,8 +36,8 @@ var WDJCardList = React.createClass({
 
         return (
 
-            <div className={cardListStyle.cardListWrap}>
-                <div className={cardListStyle.cardList}>
+            <div className="card-list-wrap">
+                <div className="card-list">
 
                     {this.props.dataValue.map(function (item) {
                          if (typeof item == 'string') {

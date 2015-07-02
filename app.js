@@ -2,7 +2,7 @@ var WDJApp = React.createClass({
 
     render: function () {
 
-        return <Pages dir="h" bg="http://bodywell.com.au/wp-content/uploads/revslider/home2/img-33.jpg">
+        return <Pages dir="v">
 
                     <Page>
                         <WDJCardList dataValue={[<WDJAppCard packageName="com.xiudang.jiukuaiyou.ui"/>, <WDJAppCard packageName="com.youku.phone"/>]}/>
@@ -12,11 +12,12 @@ var WDJApp = React.createClass({
 
                             <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
 
+                            <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title 2" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
                         </WDJCardList>
                     </Page>
 
                     <Page>
-                        <Pages dir="v">
+                        <Pages dir="h">
                             <Page>
                                 <WDJVideo type="intern" mp4Url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
                                              oggUrl="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv"/>
