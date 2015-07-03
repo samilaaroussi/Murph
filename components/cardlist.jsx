@@ -2,16 +2,16 @@ var StyleSheet = window.stilr;
 
 var cardListStyle = StyleSheet.create({
 
-  cardListWrap: {
-      position: 'relative',
-      width: '100%'
-  },
+    cardListWrap: {
+        position: 'relative',
+        width: '100%'
+    },
 
-  cardList: {
-      position: 'relative',
-      width: '100%',
-      height: '100%'
-  }
+    cardList: {
+        position: 'relative',
+        width: '100%',
+        height: '100%'
+    }
 });
 
 var WDJCardList = React.createClass({
@@ -82,6 +82,5 @@ var WDJCardList = React.createClass({
                 </div>
             </div>
         );
-
     }
 });

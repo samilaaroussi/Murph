@@ -27,12 +27,12 @@ var WDJShareMoments = React.createClass({
           
         } else {
             
-              res = <div className={momentsStyle.modalButton}>
-                        <WDJModal>
-                            <WDJQRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
-                        </WDJModal>
-                        <a href='#' id="showButton" className={this.props.icon} alt={this.props.title}><i></i></a>
-                    </div>;
+            res = <div className={momentsStyle.modalButton}>
+                    <WDJModal>
+                        <WDJQRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
+                    </WDJModal>
+                    <a href='#' id="showButton" className={this.props.icon} alt={this.props.title}><i></i></a>
+                </div>;
         
         }
 

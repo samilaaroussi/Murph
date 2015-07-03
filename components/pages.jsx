@@ -1,14 +1,14 @@
 var pageStyle = StyleSheet.create({
 
-  parallaxBg: {
-      position: 'absolute',
-      left: '0',
-      top: '0',
-      width: '130%',
-      height: '100%',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-  }
+    parallaxBg: {
+        position: 'absolute',
+        left: '0',
+        top: '0',
+        width: '130%',
+        height: '100%',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+    }
 });
 
 var Pages = React.createClass({
@@ -16,7 +16,6 @@ var Pages = React.createClass({
     componentDidMount: function() {
 
         // Initialize Swiper
-
 
         if (this.props.dir == 'v') {
 
@@ -61,7 +60,6 @@ var Pages = React.createClass({
 
                 <div className={"swiper-pagination swiper-pagination-white swiper-pagination-" + this.props.dir}></div>
             </div>
-
         );
     }
 });
