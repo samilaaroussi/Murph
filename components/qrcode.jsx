@@ -1,7 +1,4 @@
-var React = require('react');
-var WDJ = require('../components.js');
-
-var QRCode = React.createClass({
+var WDJQRCode = React.createClass({
 
     render: function(){
         
@@ -10,5 +7,3 @@ var QRCode = React.createClass({
         );
     }
 });
-
-module.exports = QRCode;

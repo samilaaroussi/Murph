@@ -1,7 +1,4 @@
-var React = require('react');
-var StyleSheet = require('stilr');
-var _ = require('lodash');
-var WDJ = require('../components.js');
+var StyleSheet = window.stilr;
 
 var momentsStyle = StyleSheet.create({
 
@@ -11,7 +8,7 @@ var momentsStyle = StyleSheet.create({
     }
 });
 
-var ShareMoments = React.createClass({
+var WDJShareMoments = React.createClass({
 
     handleClick: function() {
 
@@ -31,9 +28,9 @@ var ShareMoments = React.createClass({
         } else {
             
             res = <div className={momentsStyle.modalButton}>
-                    <WDJ.Modal>
-                        <WDJ.QRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
-                    </WDJ.Modal>
+                    <WDJModal>
+                        <WDJQRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
+                    </WDJModal>
                     <a href='#' id="showButton" className={this.props.icon} alt={this.props.title}><i></i></a>
                 </div>;
         
@@ -42,5 +39,3 @@ var ShareMoments = React.createClass({
         return res;
     }
 });
-
-module.exports = ShareMoments;

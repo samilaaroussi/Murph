@@ -1,6 +1,4 @@
-var React = require('react');
-var StyleSheet = require('stilr');
-var WDJ = require('../components.js');
+var StyleSheet = window.stilr;
 
 var cardListStyle = StyleSheet.create({
 
@@ -16,7 +14,7 @@ var cardListStyle = StyleSheet.create({
     }
 });
 
-var CardList = React.createClass({
+var WDJCardList = React.createClass({
     
     render: function () {
 
@@ -28,7 +26,7 @@ var CardList = React.createClass({
                         {this.props.dataValue.map(function (item) {
                             if (typeof item == 'string') {
                                 
-                                return <WDJ.AppCard packageName={item}/>;
+                                return <WDJAppCard packageName={item}/>;
                             
                             }
 
@@ -36,7 +34,7 @@ var CardList = React.createClass({
 
                                 if ('packageName' in item || 'title' in item) {
 
-                                    return <WDJ.AppCard packageName={item.packageName || ''} icon={item.icon} title={item.title} desc={item.desc}/>;
+                                    return <WDJAppCard packageName={item.packageName || ''} icon={item.icon} title={item.title} desc={item.desc}/>;
                                
                                 } else {
 
@@ -60,7 +58,7 @@ var CardList = React.createClass({
                     {this.props.dataValue.map(function (item) {
                          if (typeof item == 'string') {
                              
-                             return <WDJ.AppCard packageName={item}/>;
+                             return <WDJAppCard packageName={item}/>;
                          
                          }
 
@@ -68,7 +66,7 @@ var CardList = React.createClass({
 
                              if ('packageName' in item || 'title' in item) {
 
-                                 return <WDJ.AppCard packageName={item.packageName || ''} icon={item.icon} title={item.title} desc={item.desc}/>;
+                                 return <WDJAppCard packageName={item.packageName || ''} icon={item.icon} title={item.title} desc={item.desc}/>;
                             
                              } else {
 
@@ -86,5 +84,3 @@ var CardList = React.createClass({
         );
     }
 });
-
-module.exports = CardList;

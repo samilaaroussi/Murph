@@ -1,7 +1,4 @@
-var React = require('react');
-var StyleSheet = require('stilr');
-var _ = require('lodash');
-var WDJ = require('../components.js');
+var StyleSheet = window.stilr;
 
 var wechatStyle = StyleSheet.create({
 
@@ -11,7 +8,7 @@ var wechatStyle = StyleSheet.create({
     }
 });
 
-var ShareWechat = React.createClass({
+var WDJShareWechat = React.createClass({
 
     handleClick: function() {
         campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT');
@@ -28,9 +25,9 @@ var ShareWechat = React.createClass({
         } else {
             
             res = <div className={wechatStyle.modalButton}>
-                      <WDJ.Modal>
-                          <WDJ.QRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
-                      </WDJ.Modal>
+                      <WDJModal>
+                          <WDJQRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
+                      </WDJModal>
                       <a href='#openModal' className={this.props.icon} alt={this.props.title}><i></i></a>
                   </div>;
         }
@@ -40,4 +37,3 @@ var ShareWechat = React.createClass({
     }
 });
 
-module.exports = ShareWechat;

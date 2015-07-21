@@ -1,6 +1,3 @@
-var React = require('react');
-var WDJ = require('../components.js');
-
 var Page = React.createClass({
     
     render: function(){
@@ -12,5 +9,3 @@ var Page = React.createClass({
         );
     }
 });
-
-module.exports = Page;

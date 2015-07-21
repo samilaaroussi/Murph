@@ -6,12 +6,13 @@
 
     <title>Murph - Page Sample</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="Swiper/dist/css/swiper.css">
+    <link rel="stylesheet" href="Swiper/dist/css/swiper.min.css">
 </head>
 <body>
+    <script src="build/react.js"></script>
+    <script src="build/JSXTransformer.js"></script>
     <script src="build/katana.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script> 
 
         var fullList = null;
@@ -44,6 +45,18 @@
         var rightFlag = false;
 
     </script>
+    
+    <script src="build/stilr.js"></script>
+    <script type="text/jsx" src="components/appcard.jsx"></script>
+    <script type="text/jsx" src="components/cardlist.jsx"></script>
+    <script type="text/jsx" src="components/qrcode.jsx"></script>
+    <script type="text/jsx" src="components/weibo-share.jsx"></script>
+    <script type="text/jsx" src="components/wechat-share.jsx"></script>
+    <script type="text/jsx" src="components/moments-share.jsx"></script>
+    <script type="text/jsx" src="components/page.jsx"></script>
+    <script type="text/jsx" src="components/pages.jsx"></script>
+    <script type="text/jsx" src="components/modal.jsx"></script>
+    <script type="text/jsx" src="components/video.jsx"></script>
     <script>
 
         function GetURLParameter(sParam)
@@ -64,12 +77,22 @@
 
         if (window.location.search.indexOf('app=' + app) > -1) {
             var script = document.createElement('script');
-            script.src = app + '-bundled.js';
+            script.type = 'text/jsx';
+            script.src = app + '.js';
             $('body').append(script);
         }
 
     </script>
 
+    <script type="text/jsx"> 
+        React.render(
+
+            <WDJApp/>
+
+            , document.body);
+    </script>
 </body>
+
+    <script src="Swiper/dist/js/swiper.jquery.min.js"></script>
 
 </html>

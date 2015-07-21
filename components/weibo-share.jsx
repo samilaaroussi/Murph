@@ -1,6 +1,4 @@
-var React = require('react');
-var StyleSheet = require('stilr');
-var WDJ = require('../components.js');
+var StyleSheet = window.stilr;
 
 var weiboStyle = StyleSheet.create({
 
@@ -10,7 +8,7 @@ var weiboStyle = StyleSheet.create({
     }
 });
 
-var ShareWeibo = React.createClass({
+var WDJShareWeibo = React.createClass({
 
     handleClick: function() {
         campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'SINA_WEIBO');
@@ -32,4 +30,3 @@ var ShareWeibo = React.createClass({
     }
 });
 
-module.exports = ShareWeibo;
