@@ -9,8 +9,9 @@ module.exports = function (grunt) {
     	        	debug: true,
     	        	transform: ['reactify'],
     	        	browserifyOptions: {
-    	        		require: ['./components.js', 'react']
-    	        	}
+		        		require: ['./components.js']
+		        	},
+		        	require: ['react']
     	        }
 		    },
 
@@ -21,8 +22,9 @@ module.exports = function (grunt) {
 		        	debug: true,
 		        	transform: ['reactify'],
 		        	browserifyOptions: {
-		        		external: ['./components.js', 'react']
-		        	}
+		        		external: ['./components.js']
+		        	},
+		        	external: ['react']
 		        }
 		    }
 		},
