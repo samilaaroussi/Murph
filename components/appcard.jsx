@@ -84,9 +84,6 @@ var appCardStyle = StyleSheet.create({
 
 var customStyle = StyleSheet.create({
 
-    install: {
-        background: 'blue',
-    }
 });
 
 var AppCard = React.createClass({
@@ -168,7 +165,7 @@ var AppCard = React.createClass({
     render : function() {
 
       var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
-      var mergeStyle = _.extend(_.values(appCardStyle), _.values(customStyle));
+      var mergeStyle = _.extend(appCardStyle, customStyle);
       debugger;
 
       return (

@@ -19,6 +19,7 @@ var App = React.createClass({
 
         			<WDJ.Page>
                         <WDJ.Video type="intern" mp4Url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" oggUrl="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv"/>
+                        <WDJ.Video type="youku" id="XMTI1NTgyMTI4OA"/>
                     </WDJ.Page>
         		</WDJ.Pages>
     }
