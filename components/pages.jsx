@@ -1,3 +1,9 @@
+var React = require('react');
+var StyleSheet = require('stilr');
+var Swiper = require('swiper');
+var _ = require('lodash');
+var WDJ = require('../components.js');
+
 var pageStyle = StyleSheet.create({
 
     parallaxBg: {
@@ -67,3 +73,5 @@ var Pages = React.createClass({
 var pageStyleheet = document.createElement('style');
 pageStyleheet.textContent = StyleSheet.render();
 document.head.appendChild(pageStyleheet);
+
+module.exports = Pages;
