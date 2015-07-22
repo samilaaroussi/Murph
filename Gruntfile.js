@@ -6,7 +6,6 @@ module.exports = function (grunt) {
                 src: [],
                 dest: 'components-bundled.js',
                 options: {
-                    debug: true,
                     transform: ['reactify'],
                     browserifyOptions: {
                         require: ['./components.js']
@@ -19,7 +18,6 @@ module.exports = function (grunt) {
                 src: 'app2.js',
                 dest: 'app2-bundled.js',
                 options: {
-                    debug: true,
                     transform: ['reactify'],
                     browserifyOptions: {
                         external: ['./components.js']
@@ -51,5 +49,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('build', ['browserify:components','browserify:app']);
-    grunt.registerTask('server', ['browserify:components','browserify:app']);
+    grunt.registerTask('server', ['watch:components','watch:app']);
 };

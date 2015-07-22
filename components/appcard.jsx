@@ -13,7 +13,7 @@ var appCardStyle = StyleSheet.create({
         padding: '10px',
         color: '#333',
         background: '#fff',
-        boxShadow: '0px 1px 2px #D6D6D6'
+        boxShadow: '0px 1px 2px rgba(33,33,33,0.5)'
     },
     viewDetail: {
         display: 'block',
@@ -166,7 +166,6 @@ var AppCard = React.createClass({
 
       var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
       var mergeStyle = _.extend(appCardStyle, customStyle);
-      debugger;
 
       return (
           <div className={appCardStyle.card}>
