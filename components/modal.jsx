@@ -1,4 +1,7 @@
-var WDJModal = React.createClass({
+var React = require('react');
+var WDJ = require('../components.js');
+
+var Modal = React.createClass({
 
     componentDidMount: function() {
 
@@ -24,3 +27,5 @@ var WDJModal = React.createClass({
     }
 
 });
+
+module.exports = Modal;

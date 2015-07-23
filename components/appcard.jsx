@@ -1,4 +1,7 @@
-var StyleSheet = window.stilr;
+var React = require('react');
+var StyleSheet = require('stilr');
+var _ = require('lodash');
+var WDJ = require('../components.js');
 
 var appCardStyle = StyleSheet.create({
 
@@ -10,7 +13,7 @@ var appCardStyle = StyleSheet.create({
         padding: '10px',
         color: '#333',
         background: '#fff',
-        boxShadow: '0px 1px 2px #D6D6D6'
+        boxShadow: '0px 1px 2px rgba(33,33,33,0.5)'
     },
     viewDetail: {
         display: 'block',
@@ -35,7 +38,6 @@ var appCardStyle = StyleSheet.create({
         marginLeft: '10px'
     },
     count: {
-
         padding: '6px 0',
         fontSize: '12px',
         lineHeight: '1',
@@ -71,7 +73,6 @@ var appCardStyle = StyleSheet.create({
         overflow: 'hidden',
         width: '16px'
     },
-
     install: {
         background: '#4CC9B6',
         color: '#fff',
@@ -81,7 +82,11 @@ var appCardStyle = StyleSheet.create({
     }
 });
 
-var WDJAppCard = React.createClass({
+var customStyle = StyleSheet.create({
+
+});
+
+var AppCard = React.createClass({
 
     getInitialState: function () {
             return {
@@ -160,6 +165,7 @@ var WDJAppCard = React.createClass({
     render : function() {
 
       var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
+      var mergeStyle = _.extend(appCardStyle, customStyle);
 
       return (
           <div className={appCardStyle.card}>
@@ -170,8 +176,10 @@ var WDJAppCard = React.createClass({
                   <div className={appCardStyle.title}>{this.props.title || this.state.title}</div>
               </div>
               <div className={appCardStyle.description} dangerouslySetInnerHTML={{__html: desc}}/>
-              <a href="#" onClick={this.handleClick} className={appCardStyle.install + ' ' + appCardStyle.button}><span className={appCardStyle.iconBtn}></span><span>{this.getInstallStateText()}</span></a>
+              <a href="#" onClick={this.handleClick} className={mergeStyle.install + ' ' + appCardStyle.button}><span className={appCardStyle.iconBtn}></span><span>{this.getInstallStateText()}</span></a>
           </div>
       );
     }
 });
+
+module.exports = AppCard;
