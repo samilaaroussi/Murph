@@ -49,5 +49,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('build', ['browserify:components','browserify:app']);
-    grunt.registerTask('server', ['watch:components','watch:app']);
+    grunt.registerTask('server', ['browserify:components','browserify:app', 'watch']);
 };
