@@ -63,7 +63,7 @@
             }
         };
 
-        var app = GetURLParameter('app');
+        var app = GetURLParameter('app').replace(/\//g, '');
 
         if (window.location.search.indexOf('app=' + app) > -1) {
             var script = document.createElement('script');
