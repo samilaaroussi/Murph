@@ -5,6 +5,7 @@
   "author": "Wandoulabs",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^3.10.0",
     "react": "^0.13.3",
     "stilr": "^0.2.2"
   },
