@@ -9,3 +9,6 @@
 /.sass-cache/
 /.tmp/
 /gzip/
+
+components-bundled.js
+app2-bundled.js
