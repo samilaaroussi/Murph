@@ -1266,17 +1266,9 @@ a.button span {
     display: inline-block;
 }
 
-video {
-    max-width: 295px   !important;
+video, iframe {
+    max-width: 100%   !important;
     height: auto   !important;
-    margin: 15px auto;
-
-}
-
-iframe {
-    display:block; /* force the iframe to display as block */   
-    height:auto; /* assign 100% height */
-    max-width: 295px;
-    margin: 15px auto;
+    margin: 15px 10px;
 
 }

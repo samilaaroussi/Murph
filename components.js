@@ -1,3 +1,5 @@
+var React = require('react');
+
 module.exports = {
     AppCard: require('./components/appcard.jsx'),
     Video: require('./components/video.jsx'),

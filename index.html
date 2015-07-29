@@ -13,25 +13,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script> 
-
         var fullList = null;
         var pageData = null;
         var shareData = null;
         var shareDialogRendered = false;
-
         var fullpageSwiper;
         var cardListSwiper;
         var mapSwiper;
         var oldVersion = false;
-
         var device = {};
-
         device.isP4 = campaignTools.UA.inWdj;
         device.isWechat = campaignTools.UA.inWechat;
         device.isRetina = campaignTools.UA.isRetina;
         device.isPC = campaignTools.inPC();
         device.isAndroid = campaignTools.UA.inAndroid;
-
         if (device.isP4) {
             var versionName = campaignTools.getVersionName();
             versionName = versionName.split('.');
@@ -39,16 +34,13 @@
                 oldVersion = true;
             }
         }
-
         var leftFlag = false;
         var rightFlag = false;
-
     </script>
 
     <script src="components-bundled.js"></script>
 
     <script>
-
         function GetURLParameter(sParam)
         {
             var sPageURL = window.location.search.substring(1);
@@ -62,15 +54,12 @@
                 }
             }
         };
-
-        var app = GetURLParameter('app');
-
+        var app = GetURLParameter('app').replace(/\//g, '');
         if (window.location.search.indexOf('app=' + app) > -1) {
             var script = document.createElement('script');
             script.src = app + '-bundled.js';
             $('body').append(script);
         }
-
     </script>
 
 </body>
