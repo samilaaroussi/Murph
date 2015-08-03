@@ -78,7 +78,6 @@ html, body {
 }
 
 body {
-  text-shadow: 0 1px 0 rgba(255,255,255,.4);
   position: relative;
   margin: 0;
   padding: 0;
@@ -155,49 +154,6 @@ body {
     height: 33px;
     width: 82px;
   }
-}
-
-.header .bg {
-  padding: 100px 0;
-}
-
-.header .bg i {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  width: 244px;
-  height: 288px;
-  margin: auto;
-  background: url('http://static.wdjimg.com/www/images/www/tochild/cover.png') center center no-repeat;
-}
-
-.header .container {
-  margin: 0;
-  padding: 0;
-  text-indent: -999em;
-  font-size: 0;
-  display: none;
-}
-
-.text .bg {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  position: absolute;
-  right: 0;
-  top: -50px;
-  width: 86px;
-  height: 120px;
-  background: url('http://static.wdjimg.com/www/images/www/tochild/fish.png') center center no-repeat;
-}
-
-.text .our-team {
-  padding-top: 40px;
-  text-align: right;
 }
 
 .download {
@@ -634,23 +590,6 @@ body {
   }
 }
 
-.cover {
-    position: relative
-}
-.cover .description {
-    font-size: 12px;
-    padding: 10px;
-    color: #fff
-}
-.cover .gesture {
-    bottom: 10px
-}
-.cover-inner {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    margin-top: -230px
-}
 .logo-cover {
     margin: 20px 0
 }
@@ -1171,16 +1110,10 @@ a.button span {
     height: 100%
 }
 
-.swiper-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 .swiper-slide {
-    height: 100%;
-    position: relative;
     text-align: center;
     font-size: 18px;
+    background: none;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -1195,80 +1128,4 @@ a.button span {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-}
-
-.swiper-wrapper {
-
-  height: 100%;
-  position: relative;
-}
-
-.swiper-main {
-
-  height: 100%;
-  position: relative;
-}
-
-.modalDialog {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog > div {
-    max-width: 300px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px;
-    border-radius: 5px;
-    background: #fff;
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -11px;
-    text-align: center;
-    top: -11px;
-    width: 24px;
-    height: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #333;
-}
-
-.modal-button {
-
-    display: inline-block;
-}
-
-video, iframe {
-    max-width: 100%   !important;
-    height: auto   !important;
-    margin: 15px 10px;
-
 }

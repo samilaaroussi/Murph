@@ -1,5 +1,5 @@
 var React = require('react');
-var WDJ = require('../components.js');
+var WDJ = require('components');
 
 var QRCode = React.createClass({
 

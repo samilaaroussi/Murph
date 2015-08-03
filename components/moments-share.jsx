@@ -1,9 +1,9 @@
 var React = require('react');
 var StyleSheet = require('stilr');
 var _ = require('lodash');
-var WDJ = require('../components.js');
+var WDJ = require('components');
 
-var momentsStyle = StyleSheet.create({
+var defaultStyle = StyleSheet.create({
 
     modalButton: {
 
@@ -15,27 +15,24 @@ var ShareMoments = React.createClass({
 
     handleClick: function() {
 
-        var runApp = campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT_TIMELINE');   
-        <a href="#" onClick={runApp} alt={this.props.title} className={this.props.icon}><i></i></a>
+        campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT_TIMELINE');
     
     },
 
     render: function() {
         
         var res;
+        var customStyle = this.props.customStyle || '';
+        var mergeStyle = _.merge(defaultStyle, customStyle);
+        var style = StyleSheet.create(mergeStyle);
         
         if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
             
-            res = this.HandClick;
+            res = <div className={style.modalButton}><a href="#" onClick={this.handleClick} alt={this.props.title}>{this.props.children}</a></div>;
           
         } else {
             
-            res = <div className={momentsStyle.modalButton}>
-                    <WDJ.Modal>
-                        <WDJ.QRCode content={'http://www.wandoujia.com/apps' + this.props.url}/>
-                    </WDJ.Modal>
-                    <a href='#' id="showButton" className={this.props.icon} alt={this.props.title}><i></i></a>
-                </div>;
+            res = <div className={style.modalButton}><a href='#' id="showButton" alt={this.props.title}>{this.props.children}</a></div>;
         
         }
 

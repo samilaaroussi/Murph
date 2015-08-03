@@ -1,6 +1,5 @@
-var React = require('react');
-
 module.exports = {
+    DlButton: require('./components/dlbutton.jsx'),
     AppCard: require('./components/appcard.jsx'),
     Video: require('./components/video.jsx'),
     Pages: require('./components/pages.jsx'),
@@ -11,5 +10,4 @@ module.exports = {
     ShareMoments: require('./components/moments-share.jsx'),
     ShareWeibo: require('./components/weibo-share.jsx'),
     ShareWechat: require('./components/wechat-share.jsx')
-
 };

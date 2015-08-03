@@ -10,11 +10,9 @@ module.exports = function (grunt) {
                 src: [],
                 dest: 'components-bundled.js',
                 options: {
+                	alias: ['./components.js:components'],
                     transform: ['reactify'],
-                    preBundleCB: function (b) {
-                        b.require('react');
-                        b.require('./build/components.js');
-                    }
+                    require: ['react', 'lodash', 'swiper', 'stilr', './components.js']
                 }
             },
 
@@ -24,10 +22,7 @@ module.exports = function (grunt) {
                 dest: 'app2-bundled.js',
                 options: {
                     transform: ['reactify'],
-                    preBundleCB: function (b) {
-                        b.external('react');
-                        b.external('./build/components.js');
-                    }
+                    external: ['react', 'lodash', 'swiper', 'stilr', 'components']
                 }
             }
         },

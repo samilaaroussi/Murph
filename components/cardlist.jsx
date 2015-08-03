@@ -1,8 +1,9 @@
 var React = require('react');
 var StyleSheet = require('stilr');
-var WDJ = require('../components.js');
+var _ = require('lodash');
+var WDJ = require('components');
 
-var cardListStyle = StyleSheet.create({
+var defaultStyle = {
 
     cardListWrap: {
         position: 'relative',
@@ -14,17 +15,21 @@ var cardListStyle = StyleSheet.create({
         width: '100%',
         height: '100%'
     }
-});
+};
 
 var CardList = React.createClass({
     
     render: function () {
 
+        var customStyle = this.props.customStyle || '';
+        var mergeStyle = _.merge(defaultStyle, customStyle);
+        var style = StyleSheet.create(mergeStyle);
+
         if (!this.props.children) {
 
             return (
-                <div className={cardListStyle.cardListWrap}>
-                    <div className={cardListStyle.cardList}>
+                <div className={style.cardListWrap}>
+                    <div className={style.cardList}>
                         {this.props.dataValue.map(function (item) {
                             if (typeof item == 'string') {
                                 
@@ -54,8 +59,8 @@ var CardList = React.createClass({
 
         return (
 
-            <div className={cardListStyle.cardListWrap}>
-                <div className={cardListStyle.cardList}>
+            <div className={style.cardListWrap}>
+                <div className={style.cardList}>
 
                     {this.props.dataValue.map(function (item) {
                          if (typeof item == 'string') {

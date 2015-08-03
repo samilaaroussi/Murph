@@ -2,9 +2,9 @@ var React = require('react');
 var StyleSheet = require('stilr');
 var Swiper = require('swiper');
 var _ = require('lodash');
-var WDJ = require('../components.js');
+var WDJ = require('components');
 
-var pageStyle = StyleSheet.create({
+var defaultStyle = {
 
     parallaxBg: {
         position: 'absolute',
@@ -15,7 +15,7 @@ var pageStyle = StyleSheet.create({
         backgroundSize: 'cover',
         backgroundPosition: 'center'
     }
-});
+};
 
 var Pages = React.createClass({
 
@@ -55,12 +55,16 @@ var Pages = React.createClass({
             var divStyle = {backgroundImage:'url(' + this.props.bg +')'};
         }
 
+        var customStyle = this.props.customStyle || '';
+        var mergeStyle = _.merge(defaultStyle, customStyle);
+        var style = StyleSheet.create(mergeStyle);
+
         return (
-            <div className={"swiper-container swiper-container-" + this.props.dir}>
-                <div className={pageStyle.parallaxBg} style={divStyle} data-swiper-parallax="-23%">
+            <div className={style.swiperContainer + " swiper-container-" + this.props.dir}>
+                <div className={style.parallaxBg} style={divStyle} data-swiper-parallax="-23%">
                 </div>
                 
-                <div className="swiper-wrapper">
+                <div className={style.swiperWrapper}>
                     {this.props.children}
                 </div>
 
@@ -69,9 +73,5 @@ var Pages = React.createClass({
         );
     }
 });
-
-var pageStyleheet = document.createElement('style');
-pageStyleheet.textContent = StyleSheet.render();
-document.head.appendChild(pageStyleheet);
 
 module.exports = Pages;
