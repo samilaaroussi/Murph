@@ -1,9 +1,8 @@
 var React = require('react');
 var StyleSheet = require('stilr');
 var _ = require('lodash');
-var WDJ = require('../components.js');
 
-var appCardStyle = StyleSheet.create({
+var defaultStyle = {
 
     card: {
         position: 'relative',
@@ -29,21 +28,19 @@ var appCardStyle = StyleSheet.create({
         overflow: 'hidden',
         float: 'left'
     },
-    title: {
+    metaWrap: {
         padding: '15px 0',
         fontSize: '17px',
         lineHeight: '1',
         color: '#333',
         float: 'left',
-        marginLeft: '10px'
+        marginLeft: '10px',
+        textAlign: 'left'
     },
-    count: {
-        padding: '6px 0',
-        fontSize: '12px',
-        lineHeight: '1',
-        color: '#999',
-        float: 'left',
-        marginLeft: '10px'
+    meta: {
+        margin: '7px 0',
+        fontSize: '10px',
+        color: '#999'
     },
     description: {
         fontSize: '12px',
@@ -80,23 +77,27 @@ var appCardStyle = StyleSheet.create({
         top: '18px',
         right: '10px'
     }
-});
 
-var customStyle = StyleSheet.create({
-
-});
+};
 
 var AppCard = React.createClass({
 
     getInitialState: function () {
-            return {
-                icon: '',
-                title: '',
-                desc: '',
-                count: 0,
-                isInstalled: false
-            };
+        return {
+            icon: '',
+            title: '',
+            desc: '',
+            count: 0,
+            isInstalled: false
+        };
     },
+
+    componentDidMount: function() {
+
+            var stylesheet = document.createElement('style'); 
+            stylesheet.textContent = StyleSheet.render();
+            document.head.appendChild(stylesheet);
+        },
 
     componentWillMount: function () {
 
@@ -109,7 +110,8 @@ var AppCard = React.createClass({
                     icon: data.icons.px68,
                     title: data.title,
                     desc: data.description,
-                    count: data.downloadCountStr
+                    count: data.downloadCountStr,
+                    size: data.latestApk.size
                 });
             }.bind(this)
         });
@@ -123,7 +125,6 @@ var AppCard = React.createClass({
             }
            
         }
-
     },
 
     handleClick: function(event) {
@@ -164,21 +165,28 @@ var AppCard = React.createClass({
 
     render : function() {
 
-      var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
-      var mergeStyle = _.extend(appCardStyle, customStyle);
+        var WDJ = require('components');
 
-      return (
-          <div className={appCardStyle.card}>
-              <div className={appCardStyle.viewDetail}>
-                  <div className={appCardStyle.icon}>
+        var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
+        var customStyle = this.props.customStyle || '';
+        var mergeStyle = _.merge(defaultStyle, customStyle);
+        var style = StyleSheet.create(mergeStyle);
+
+        return (
+            <div className={style.card}>
+              <div className={style.viewDetail}>
+                  <div className={style.icon}>
                       <img src={this.props.icon || this.state.icon} alt={this.props.title || this.state.title} />
                   </div>
-                  <div className={appCardStyle.title}>{this.props.title || this.state.title}</div>
+                  <div className={style.metaWrap}>
+                    {this.props.title || this.state.title}
+                    <p className={style.meta}>{this.state.count}人安装 {this.state.size}</p>
+                  </div>
               </div>
-              <div className={appCardStyle.description} dangerouslySetInnerHTML={{__html: desc}}/>
-              <a href="#" onClick={this.handleClick} className={mergeStyle.install + ' ' + appCardStyle.button}><span className={appCardStyle.iconBtn}></span><span>{this.getInstallStateText()}</span></a>
-          </div>
-      );
+              <div className={style.description || this.state.description} dangerouslySetInnerHTML={{__html: desc}}/>
+              <WDJ.DlButton packageName='vstudio.android.camera360'><span className={style.iconBtn}></span><span>{this.getInstallStateText()}</span></WDJ.DlButton>
+            </div>
+        );
     }
 });
 
