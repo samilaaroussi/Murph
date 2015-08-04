@@ -1,5 +1,5 @@
 module.exports = {
-    DlButton: require('./components/dlbutton.jsx'),
+    DownloadButton: require('./components/dlbutton.jsx'),
     AppCard: require('./components/appcard.jsx'),
     Video: require('./components/video.jsx'),
     Pages: require('./components/pages.jsx'),

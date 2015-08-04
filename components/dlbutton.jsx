@@ -33,7 +33,7 @@ var defaultStyle = {
 
 };
 
-var DlButton = React.createClass({
+var DownloadButton = React.createClass({
 
     getInitialState: function () {
         return {
@@ -116,4 +116,4 @@ var DlButton = React.createClass({
 
 });
 
-module.exports = DlButton;
+module.exports = DownloadButton;
