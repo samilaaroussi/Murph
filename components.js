@@ -1,5 +1,4 @@
 module.exports = {
-    DownloadButton: require('./components/dlbutton.jsx'),
     AppCard: require('./components/appcard.jsx'),
     Video: require('./components/video.jsx'),
     Pages: require('./components/pages.jsx'),
@@ -7,6 +6,7 @@ module.exports = {
     Modal: require('./components/modal.jsx'),
     QRCode: require('./components/qrcode.jsx'),
     CardList: require('./components/cardlist.jsx'),
+    DownloadButton: require('./components/download-button.jsx'),
     ShareMoments: require('./components/moments-share.jsx'),
     ShareWeibo: require('./components/weibo-share.jsx'),
     ShareWechat: require('./components/wechat-share.jsx')
