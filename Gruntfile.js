@@ -1,12 +1,22 @@
-var browserify = require('browserify');
-var b = browserify();
-
 module.exports = function (grunt) {
     grunt.initConfig({
+
+        connect: {
+            server: {
+                options: {
+                    port: 9000,
+                    base: 'app',
+                    keepalive: true,
+                    open: {
+                    target: 'http://localhost:9000'
+                    }
+                }
+            }
+        },
+
         browserify: {
 
             components: {
-                debug: true,
                 src: [],
                 dest: 'components-bundled.js',
                 options: {
@@ -17,7 +27,6 @@ module.exports = function (grunt) {
             },
 
             app: {
-                debug: true,
                 src: 'app2.js',
                 dest: 'app2-bundled.js',
                 options: {
@@ -47,7 +56,8 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('build', ['browserify:components','browserify:app']);
-    grunt.registerTask('server', ['build', 'watch']);
+    grunt.registerTask('build', ['browserify:components','browserify:app', 'connect']);
+    grunt.registerTask('server', ['build', 'watch', 'connect']);
 };

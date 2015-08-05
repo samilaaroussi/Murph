@@ -17,6 +17,7 @@
     "grunt-browserify": "latest",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-connect": "latest",
     "grunt-reactify": "latest",
     "lodash": "latest",
     "reactify": "latest",
