@@ -5,15 +5,7 @@ var WDJ = require('components');
 
 var defaultStyle = {
 
-    button: {
-        display: 'block',
-        width: '80px',
-        height: '30px',
-        margin: '0 auto',
-        lineHeight: '32px',
-        textDecoration: 'none'
-    },
-    iconBtn: {
+    iconButton: {
         display: 'inline-block',
         verticalAlign: 'middle',
         backgroundImage: 'url(\'http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png\')',
@@ -23,10 +15,16 @@ var defaultStyle = {
         overflow: 'hidden',
         width: '16px'
     },
-    install: {
+    installButton: {
+        display: 'block',
+        width: '80px',
+        height: '30px',
+        margin: '0 auto',
+        lineHeight: '32px',
+        textDecoration: 'none',
         background: '#4CC9B6',
         color: '#fff',
-        position: 'absolute',
+        position: 'relative',
         top: '18px',
         right: '10px'
     }
@@ -37,24 +35,13 @@ var DownloadButton = React.createClass({
 
     getInitialState: function () {
         return {
-            title: '',
             isInstalled: false
         };
     },
 
     componentWillMount: function () {
 
-        $.ajax({
-            url: 'http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName,
-            dataType: 'jsonp',
 
-            success: function(data) {
-                return this.setState({
-                    title: data.title
-                });
-            }.bind(this)
-        });
-    
         if (device.isP4) {
 
             if (campaignTools.isInstalled(this.props.packageName)) {
@@ -66,23 +53,31 @@ var DownloadButton = React.createClass({
         }
     },
 
+
     handleClick: function(event) {
+
+        var apk = this.props.packageName;
+
+            if (apk.indexOf('http://apps.wandoujia.com/api/v1/apps/' === 0)){
+
+                apk = apk.substring(apk.lastIndexOf("/")+1);
+            }
 
         if (device.isP4) {
 
             if (this.state.isInstalled) {
 
-                campaignTools.openApp(this.props.packageName);
+                campaignTools.openApp(apk);
                 
             } else {
 
-                campaignTools.installApp(this.props.packageName);
+                campaignTools.installApp(apk);
                 
             }
             
         } else {
 
-            window.open('http://www.wandoujia.com/apps/' + this.props.packageName)
+            window.open('http://www.wandoujia.com/apps/' + apk)
         }
 
     },
@@ -109,7 +104,7 @@ var DownloadButton = React.createClass({
         var style = StyleSheet.create(mergeStyle);
 
         return (
-                <a href="#" onClick={this.handleClick} className={style.install + ' ' + style.button}>{this.props.children}</a>
+            <a href="#" onClick={this.handleClick} className={style.installButton}>{this.props.children}</a>
 
         );
     }

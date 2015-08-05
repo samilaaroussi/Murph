@@ -52,14 +52,6 @@ var defaultStyle = {
         textAlign: 'left',
     },
 
-    button: {
-        display: 'block',
-        width: '80px',
-        height: '30px',
-        margin: '0 auto',
-        lineHeight: '32px',
-        textDecoration: 'none'
-    },
     iconBtn: {
         display: 'inline-block',
         verticalAlign: 'middle',
@@ -92,17 +84,17 @@ var AppCard = React.createClass({
         };
     },
 
-    componentDidMount: function() {
-
-            var stylesheet = document.createElement('style'); 
-            stylesheet.textContent = StyleSheet.render();
-            document.head.appendChild(stylesheet);
-        },
-
     componentWillMount: function () {
 
+        var apk = this.props.packageName;
+
+            if (apk.indexOf('http://apps.wandoujia.com/api/v1/apps/' === 0)){
+
+                apk = apk.substring(apk.lastIndexOf("/")+1);
+            }
+
         $.ajax({
-            url: 'http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName,
+            url: 'http://apps.wandoujia.com/api/v1/apps/' + apk,
             dataType: 'jsonp',
 
             success: function(data) {
@@ -118,34 +110,13 @@ var AppCard = React.createClass({
 
         if (device.isP4) {
 
-            if (campaignTools.isInstalled(this.props.packageName)) {
+            if (campaignTools.isInstalled(apk)) {
 
                 this.state.isInstalled = true;
 
             }
            
         }
-    },
-
-    handleClick: function(event) {
-
-        if (device.isP4) {
-
-            if (this.state.isInstalled) {
-
-                campaignTools.openApp(this.props.packageName);
-                
-            } else {
-
-                campaignTools.installApp(this.props.packageName);
-                
-            }
-            
-        } else {
-
-            window.open('http://www.wandoujia.com/apps/' + this.props.packageName)
-        }
-
     },
 
     getInstallStateText: function () {
@@ -184,7 +155,7 @@ var AppCard = React.createClass({
                   </div>
               </div>
               <div className={style.description || this.state.description} dangerouslySetInnerHTML={{__html: desc}}/>
-              <WDJ.DlButton packageName='vstudio.android.camera360'><span className={style.iconBtn}></span><span>{this.getInstallStateText()}</span></WDJ.DlButton>
+              <WDJ.DownloadButton customStyle={defaultStyle.install} packageName={this.props.packageName}><span className={style.iconBtn}></span><span>{this.getInstallStateText()}</span></WDJ.DownloadButton>
             </div>
         );
     }
