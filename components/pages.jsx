@@ -51,20 +51,16 @@ var Pages = React.createClass({
 
     render: function () {
 
-        if (this.props.bg){
-            var divStyle = {backgroundImage:'url(' + this.props.bg +')'};
-        }
-
         var customStyle = this.props.customStyle || '';
         var mergeStyle = _.merge(defaultStyle, customStyle);
         var style = StyleSheet.create(mergeStyle);
 
         return (
-            <div className={style.swiperContainer + " swiper-container-" + this.props.dir}>
-                <div className={style.parallaxBg} style={divStyle} data-swiper-parallax="-23%">
+            <div className={"swiper-container swiper-container-" + this.props.dir}>
+                <div className={style.parallaxBg} data-swiper-parallax={this.props.parallax || '0%'}>
                 </div>
                 
-                <div className={style.swiperWrapper}>
+                <div className="swiper-wrapper">
                     {this.props.children}
                 </div>
 
