@@ -92,29 +92,28 @@ var App = React.createClass({
                         </WDJ.Page>
 
                         <WDJ.Page>
-                        <WDJ.QRCode size="9" content="http://www.wandoujia.com">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.</p>
-                            <WDJ.DownloadButton
-                                customStyle={{
-                                    installButton: {
-                                        top: '0px',
-                                        position: 'relative',
-                                        right: '0px',
-                                        borderRadius: '4px',
-                                        backgroundColor: '#4099FF',
-                                        width: 'auto',
-                                        margin: '20px',
-                                        padding: '4px 10px',
-                                        ':hover': {
-                                            backgroundColor: '#337acc'
-                                        }
+
+                        <WDJ.QRCode size="9" content="http://www.wandoujia.com"/>
+                        <WDJ.DownloadButton
+                            customStyle={{
+                                installButton: {
+                                    top: '0px',
+                                    position: 'relative',
+                                    right: '0px',
+                                    borderRadius: '4px',
+                                    backgroundColor: '#4099FF',
+                                    width: 'auto',
+                                    margin: '20px',
+                                    padding: '4px 10px',
+                                    ':hover': {
+                                        backgroundColor: '#337acc'
                                     }
-                                }} 
-                                packageName='http://apps.wandoujia.com/api/v1/apps/vstudio.android.camera360'>
-                                <img src="http://png.findicons.com/files/icons/2779/simple_icons/128/facebook.png" style={verticalAlign} width="30px" height="auto"/>
-                                Download
-                            </WDJ.DownloadButton>
-                        </WDJ.QRCode>
+                                }
+                            }} 
+                            packageName='http://apps.wandoujia.com/api/v1/apps/vstudio.android.camera360'>
+                            <img src="http://png.findicons.com/files/icons/2779/simple_icons/128/facebook.png" style={verticalAlign} width="30px" height="auto"/>
+                            Download
+                        </WDJ.DownloadButton>
                         </WDJ.Page>
                         <WDJ.Page>
                             <div className="share-buttons-wrap">
