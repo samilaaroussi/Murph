@@ -122,6 +122,7 @@ body {
     position:absolute;
     position:relative;
     //margin-top: -40px;
+    margin: 20px 0;
     right: 0;
     bottom: 0px;
     left: 0;
@@ -314,4 +315,20 @@ body {
 
   height: 100%;
   position: relative;
+}
+
+.qrcode {
+
+  margin: 20px;
+  background: #fff;
+}
+
+.qrcode p {
+
+  margin: 0;
+  padding: 0px 10px 10px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 20em;
+  text-align: justify;
 }
