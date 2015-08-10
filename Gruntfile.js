@@ -1,16 +1,13 @@
+
 module.exports = function (grunt) {
     grunt.initConfig({
 
         connect: {
             server: {
                 options: {
-                    port: 9000,
-                    base: 'app',
-                    keepalive: true,
-                    open: {
-                    target: 'http://localhost:9000'
-                    }
-                }
+                    port: 9997,
+                    hostname: '0.0.0.0'
+                },
             }
         },
 
@@ -27,8 +24,8 @@ module.exports = function (grunt) {
             },
 
             app: {
-                src: 'app2.js',
-                dest: 'app2-bundled.js',
+                src: 'app.js',
+                dest: 'app-bundled.js',
                 options: {
                     transform: ['reactify'],
                     external: ['react', 'lodash', 'swiper', 'stilr', 'components']
@@ -49,7 +46,8 @@ module.exports = function (grunt) {
             },
 
             options: {
-                livereload: true
+                livereload: true,
+                keepalive: true,
             }
         }
     });
@@ -58,6 +56,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('build', ['browserify:components','browserify:app', 'connect']);
-    grunt.registerTask('server', ['build', 'watch', 'connect']);
+    grunt.registerTask('build', ['browserify:components','browserify:app']);
+    grunt.registerTask('server', ['build', 'connect', 'watch']);
 };
