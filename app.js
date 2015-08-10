@@ -1,48 +1,196 @@
-var WDJApp = React.createClass({
+var React = require('react');
+var _ = require('lodash');
+var WDJ = require ('components');
+var StyleSheet = require('stilr');
+
+var App = React.createClass({
+
+    componentDidMount: function() {
+
+        var stylesheet = document.createElement('style');
+        stylesheet.textContent = StyleSheet.render();
+        document.head.appendChild(stylesheet);
+    },
 
     render: function () {
 
-        return <Pages dir="v">
+        var verticalAlign = {verticalAlign: 'middle', marginBottom: '3px'};
 
-                    <Page>
-                        <WDJCardList dataValue={[<WDJAppCard packageName="com.xiudang.jiukuaiyou.ui"/>, <WDJAppCard packageName="com.youku.phone"/>]}/>
-                    </Page>
-                    <Page>
-                        <WDJCardList dataValue={[{"packageName": "com.wandoujia.eyepetizer", "title": "GoldenEye", "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."}]}>
+        return <WDJ.Pages
+                    dir="h"
+                    parallax="-23%"
+                    customStyle={{
+                        parallaxBg: {
+                            backgroundImage: "url(http://icreateconnections.com/wp-content/uploads/revslider/home2/img-33.jpg)"
+                        }
+                }}>
 
-                            <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
+                    <WDJ.Page>
+                        <WDJ.AppCard
+                            packageName="vstudio.android.camera360"/>
+                        <WDJ.AppCard
+                            packageName="vstudio.android.camera360"
+                            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Donec a diam lectus. Sed sit amet ipsum mauris.
+                                    Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
+                    </WDJ.Page> 
+                    <WDJ.Page>
+                        <WDJ.AppCard 
+                            packageName="vstudio.android.camera360"
+                            icon="http://img.wdjimg.com/mms/icon/v1/9/c2/c0d8f5066a18079d49623cd343ba1c29_68_68.png"
+                            title="Custom Title" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Donec a diam lectus. Sed sit amet ipsum mauris.
+                                    Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
+                        <WDJ.AppCard
+                            customStyle={{
+                                installButton: {
+                                    background: '#fff'
+                                },
+                                card: {
+                                    backgroundColor: '#333',
+                                    color: '#fff'
+                                },
+                                description : {
+                                    color: '#fff',
+                                    borderTop: '1px dashed #999'
+                                },
+                                metaWrap: {
+                                    color: '#fff'
+                                }
+                            }}
+                            packageName="vstudio.android.camera360"
+                            icon="http://img.wdjimg.com/mms/icon/v1/9/c2/c0d8f5066a18079d49623cd343ba1c29_68_68.png"
+                            title="Custom Title"
+                            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Donec a diam lectus. Sed sit amet ipsum mauris.
+                                Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
 
-                            <WDJAppCard packageName="vstudio.android.camera360" title="Manual Title 2" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
-                        </WDJCardList>
-                    </Page>
+                    </WDJ.Page> 
+                    <WDJ.Page>  
+                        <WDJ.CardList dataValue={[<WDJ.AppCard packageName="com.xiudang.jiukuaiyou.ui"/>, <WDJ.AppCard packageName="com.youku.phone"/>]}/>
+                    </WDJ.Page>
+                    
+                    <WDJ.Page>
+                        <WDJ.Pages
+                            dir="v"
+                            customStyle={{
+                                parallaxBg: {
+                                    background: "#24aa42"
+                                }
+                        }}>
+                        <WDJ.Page>
+                            <WDJ.CardList
+                                dataValue={[{
+                                    "packageName": "com.wandoujia.eyepetizer", "title": "GoldenEye", "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."}]}>
+                                <WDJ.AppCard
+                                    packageName="vstudio.android.camera360"
+                                    title="Manual Title"
+                                    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Donec a diam lectus. Sed sit amet ipsum mauris.
+                                        Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."/>
+                            </WDJ.CardList>
+                        </WDJ.Page>
 
-                    <Page>
-                        <Pages dir="h">
-                            <Page>
-                                <WDJVideo type="intern" mp4Url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-                                             oggUrl="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv"/>
-                            </Page>
-
-                            <Page>
-                                <WDJVideo type="youku" id="XMTI1NTgyMTI4OA"/>
-                            </Page>
-                        </Pages>
-                    </Page>
-                    <Page>
-                        <div className="share-buttons-wrap">
-                            <div className="share-buttons">
-                                <b>分享到：</b>
-
-                                <WDJShareWeibo url="http://example.com" icon="share-weibo" title="Weibo Share" pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg" desc="Weibo description example"/>
-                                <WDJShareWechat url="http://example.com" icon="share-wechat" title="Moments Share" desc="Moments description example"/>
-                                <WDJShareMoments url="http://example.com" icon="share-wechat-timeline" title="Moments Share" desc="Moments description example"/>
-
+                        <WDJ.Page>
+                        <WDJ.QRCode size="9" content="http://www.wandoujia.com">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.</p>
+                            <WDJ.DownloadButton
+                                customStyle={{
+                                    installButton: {
+                                        top: '0px',
+                                        position: 'relative',
+                                        right: '0px',
+                                        borderRadius: '4px',
+                                        backgroundColor: '#4099FF',
+                                        width: 'auto',
+                                        margin: '20px',
+                                        padding: '4px 10px',
+                                        ':hover': {
+                                            backgroundColor: '#337acc'
+                                        }
+                                    }
+                                }} 
+                                packageName='http://apps.wandoujia.com/api/v1/apps/vstudio.android.camera360'>
+                                <img src="http://png.findicons.com/files/icons/2779/simple_icons/128/facebook.png" style={verticalAlign} width="30px" height="auto"/>
+                                Download
+                            </WDJ.DownloadButton>
+                        </WDJ.QRCode>
+                        </WDJ.Page>
+                        <WDJ.Page>
+                            <div className="share-buttons-wrap">
+                                <div className="share-buttons">
+                                   
+                                    <WDJ.ShareWeibo
+                                        url="http://example.com"
+                                        title="Weibo Share"
+                                        pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg"
+                                        desc="Weibo description example"
+                                        customStyle={{
+                                            modalButton: {
+                                                color: "#fff"
+                                            }
+                                        }}
+                                    >
+                                        <p>微博</p>
+                                    </WDJ.ShareWeibo>
+                                    <WDJ.ShareWechat
+                                        url="http://example.com"
+                                        title="Moments Share"
+                                        desc="Moments description example" 
+                                        customStyle={{
+                                            modalButton: {
+                                                color: "#fff"
+                                            }
+                                        }}
+                                    >
+                                        <p>微信</p>
+                                    </WDJ.ShareWechat>
+                                    
+                                    <WDJ.ShareMoments
+                                        url="http://example.com"
+                                        title="Moments Share"
+                                        desc="Moments description example"
+                                        customStyle={{
+                                            modalButton: {
+                                                color: "#fff"
+                                            }
+                                        }}
+                                    >
+                                        <p>朋友圈</p>
+                                    </WDJ.ShareMoments>
+                                </div>
                             </div>
-                        </div>
-                    </Page>
+                            <div className="share-buttons-wrap">
+                                <div className="share-buttons">
+                                    <b>分享到：</b>
+                                   
+                                    <WDJ.ShareWeibo
+                                        url="http://example.com"
+                                        title="Weibo Share"
+                                        pic="http://gdecogne.free.fr/photo-de-chat/photo-de-chat%20%285%29.jpg"
+                                        desc="Weibo description example"/>
+                                    <WDJ.ShareWechat
+                                        url="http://example.com"
+                                        title="Moments Share"
+                                        desc="Moments description example"/>
+                                    
+                                    <WDJ.ShareMoments
+                                        url="http://example.com"
+                                        title="Moments Share"
+                                        desc="Moments description example"/>
+                                </div>
+                            </div>
+                            </WDJ.Page>
+                        </WDJ.Pages>
+                    </WDJ.Page>
 
-                </Pages>;
-
+                </WDJ.Pages>
     }
 
 });
+
+React.render(
+
+    <App/>
+
+    , document.body);
