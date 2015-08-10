@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                 src: [],
                 dest: 'components-bundled.js',
                 options: {
-                	alias: ['./components.js:components'],
+                    alias: ['./components.js:components'],
                     transform: ['reactify'],
                     require: ['react', 'lodash', 'swiper', 'stilr', './components.js']
                 }
