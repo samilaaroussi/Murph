@@ -3,13 +3,17 @@ var StyleSheet = require('stilr');
 var _ = require('lodash');
 var WDJ = require('components');
 
-var defaultStyle = StyleSheet.create({
+var defaultStyle = {
 
     modalButton: {
 
-        display: 'inline-block'
+        display: 'inline-block',
+        fontSize: '13px',
+        lineHeight: '0.5em',
+        color: '#333'
+
     }
-});
+};
 
 var ShareMoments = React.createClass({
 
@@ -28,11 +32,11 @@ var ShareMoments = React.createClass({
         
         if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
             
-            res = <div className={style.modalButton}><a href="#" onClick={this.handleClick} alt={this.props.title}>{this.props.children}</a></div>;
+            res = <div className={style.modalButton}><a href="#" onClick={this.handleClick} alt={this.props.title} className="share-wechat-timeline"><i></i></a>{this.props.children}</div>;
           
         } else {
             
-            res = <div className={style.modalButton}><a href='#' id="showButton" alt={this.props.title}>{this.props.children}</a></div>;
+            res = <div className={style.modalButton}><a href='#' id="showButton" alt={this.props.title} className="share-wechat-timeline"><i></i></a>{this.props.children}</div>;
         
         }
 

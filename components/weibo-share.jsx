@@ -7,7 +7,21 @@ var defaultStyle = {
 
     modalButton: {
 
-        display: 'inline-block'
+        display: 'inline-block',
+        fontSize: '13px',
+        lineHeight: '0.5em',
+        color: '#333'
+
+    },
+
+    icon: {
+
+        backgroundImage: 'url(\'http://static.wdjimg.com/www/images/campaign/designaward2014/1x-s325d703603.png\')',
+        backgroundPosition: '0 -530px',
+        backgroundRepeat: 'no-repeat',
+        height: '25px',
+        overflow: 'hidden',
+        width: '25px'
     }
 };
 
@@ -30,10 +44,10 @@ var ShareWeibo = React.createClass({
 
         if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')) {
             
-            res = <div className={style.modalButton}><a href="#" onClick={this.ShareWeb} alt={this.props.title}>{this.props.children}</a></div>;
+            res = <div className={style.modalButton}><a href="#" onClick={this.ShareApp} className="share-weibo" alt={this.props.title}><i></i></a>{this.props.children}</div>;
         } else {
             
-            res = <div className={style.modalButton}><a href="#" onClick={this.ShareApp} alt={this.props.title}>{this.props.children}</a></div>;
+            res = <div className={style.modalButton}><a href="#" onClick={this.ShareWeb} className="share-weibo" alt={this.props.title}><i></i></a>{this.props.children}</div>;
         }
         
         return res;

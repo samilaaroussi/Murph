@@ -7,7 +7,11 @@ var defaultStyle = {
 
     modalButton: {
 
-        display: 'inline-block'
+        display: 'inline-block',
+        fontSize: '13px',
+        lineHeight: '0.5em',
+        color: '#333'
+
     }
 };
 
@@ -28,13 +32,13 @@ var ShareWechat = React.createClass({
             
             res = (
                 <div className={style.modalButton}>
-                        <a href="#" onClick={this.handleClick} alt={this.props.title}>{this.props.children}</a>
+                        <a href="#" onClick={this.handleClick} className="share-wechat" alt={this.props.title}><i></i></a>{this.props.children}
                 </div>
             );
 
         } else {
             
-            res = <div className={style.modalButton}><a href='#openModal' alt={this.props.title}>{this.props.children}</a></div>;
+            res = <div className={style.modalButton}><a href='#openModal' className="share-wechat" alt={this.props.title}><i></i></a>{this.props.children}</div>;
         }
 
         return res;
