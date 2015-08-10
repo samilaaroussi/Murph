@@ -62,7 +62,7 @@ var defaultStyle = {
         overflow: 'hidden',
         width: '16px'
     },
-    install: {
+    installButton: {
         background: '#4CC9B6',
         color: '#fff',
         position: 'absolute',
@@ -86,15 +86,8 @@ var AppCard = React.createClass({
 
     componentWillMount: function () {
 
-        var apk = this.props.packageName;
-
-            if (apk.indexOf('http://apps.wandoujia.com/api/v1/apps/' === 0)){
-
-                apk = apk.substring(apk.lastIndexOf("/")+1);
-            }
-
         $.ajax({
-            url: 'http://apps.wandoujia.com/api/v1/apps/' + apk,
+            url: 'http://apps.wandoujia.com/api/v1/apps/' + this.props.packageName,
             dataType: 'jsonp',
 
             success: function(data) {
@@ -110,7 +103,7 @@ var AppCard = React.createClass({
 
         if (device.isP4) {
 
-            if (campaignTools.isInstalled(apk)) {
+            if (campaignTools.isInstalled(this.props.packageName)) {
 
                 this.state.isInstalled = true;
 
@@ -140,8 +133,9 @@ var AppCard = React.createClass({
 
         var desc = this.props.desc || this.state.desc.substr(0, 80) + ' ...';
         var customStyle = this.props.customStyle || '';
-        var mergeStyle = _.merge(defaultStyle, customStyle);
+        var mergeStyle = _.merge({}, defaultStyle, customStyle);
         var style = StyleSheet.create(mergeStyle);
+
 
         return (
             <div className={style.card}>
@@ -155,7 +149,7 @@ var AppCard = React.createClass({
                   </div>
               </div>
               <div className={style.description || this.state.description} dangerouslySetInnerHTML={{__html: desc}}/>
-              <WDJ.DownloadButton customStyle={defaultStyle.install} packageName={this.props.packageName}><span className={style.iconBtn}></span><span>{this.getInstallStateText()}</span></WDJ.DownloadButton>
+              <WDJ.DownloadButton customStyle={style.installButton} packageName={this.props.packageName}><span className={style.iconBtn}></span><span>{this.getInstallStateText()}</span></WDJ.DownloadButton>
             </div>
         );
     }
