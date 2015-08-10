@@ -24,7 +24,7 @@ var defaultStyle = {
         textDecoration: 'none',
         background: '#4CC9B6',
         color: '#fff',
-        position: 'relative',
+        position: 'absolute',
         top: '18px',
         right: '10px'
     }
@@ -100,7 +100,7 @@ var DownloadButton = React.createClass({
     render: function () {
 
         var customStyle = this.props.customStyle || '';
-        var mergeStyle = _.merge(defaultStyle, customStyle);
+        var mergeStyle = _.merge({}, defaultStyle, customStyle);
         var style = StyleSheet.create(mergeStyle);
 
         return (
