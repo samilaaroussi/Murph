@@ -27,37 +27,33 @@ var defaultStyle = {
 
 var ShareWeibo = React.createClass({
 
-    ShareApp: function() {
-        campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'SINA_WEIBO');
-    },
+    handleClick: function() {
 
-    ShareWeb: function() {
-        window.open('http://service.weibo.com/share/share.php?url=' + this.props.url + '&appkey=&title=' + this.props.title +'&pic=' + this.props.pic + '&ralateUid=&language=zh_cn');
+        if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')) {
+            
+            campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'SINA_WEIBO');
+
+        } else {
+            
+            window.open('');
+
+        }
+
     },
 
     render: function() {
 
-        var res;
         var customStyle = this.props.customStyle || '';
         var mergeStyle = _.merge(defaultStyle, customStyle);
         var style = StyleSheet.create(mergeStyle);
-
-        if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')) {
-            
-            res = (
-                <div className={style.modalButton}>
-                    <a href="#" onClick={this.ShareApp} className="share-weibo" alt={this.props.title}><i></i></a>
-                    {this.props.children}
-                </div>
-                );
-        } else {
-            
-            res = (
+        
+        var res = (
             <div className={style.modalButton}>
-            <a href="#" onClick={this.ShareWeb} className="share-weibo" alt={this.props.title}><i></i></a>{this.props.children}</div>;
-        
-        }
-        
+                <a href="#" onClick={this.handleClick} className="share-weibo" alt={this.props.title}><i></i></a>
+                {this.props.children}
+            </div>
+        );
+
         return res;
     }
 });
