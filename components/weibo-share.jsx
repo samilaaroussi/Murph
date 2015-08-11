@@ -44,10 +44,18 @@ var ShareWeibo = React.createClass({
 
         if (device.isP4 && campaignTools.isInstalled('com.sina.weibo')) {
             
-            res = <div className={style.modalButton}><a href="#" onClick={this.ShareApp} className="share-weibo" alt={this.props.title}><i></i></a>{this.props.children}</div>;
+            res = (
+                <div className={style.modalButton}>
+                    <a href="#" onClick={this.ShareApp} className="share-weibo" alt={this.props.title}><i></i></a>
+                    {this.props.children}
+                </div>
+                );
         } else {
             
-            res = <div className={style.modalButton}><a href="#" onClick={this.ShareWeb} className="share-weibo" alt={this.props.title}><i></i></a>{this.props.children}</div>;
+            res = (
+            <div className={style.modalButton}>
+            <a href="#" onClick={this.ShareWeb} className="share-weibo" alt={this.props.title}><i></i></a>{this.props.children}</div>;
+        
         }
         
         return res;
