@@ -18,9 +18,16 @@ var defaultStyle = {
 var ShareMoments = React.createClass({
 
     handleClick: function() {
-
-        campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT_TIMELINE');
     
+        if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
+            
+            campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT_TIMELINE');
+
+        } else {
+            
+            window.open('');
+        
+        }
     },
 
     render: function() {
@@ -29,18 +36,10 @@ var ShareMoments = React.createClass({
         var customStyle = this.props.customStyle || '';
         var mergeStyle = _.merge(defaultStyle, customStyle);
         var style = StyleSheet.create(mergeStyle);
-        
-        if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
-            
-            res = <div className={style.modalButton}><a href="#" onClick={this.handleClick} alt={this.props.title} className="share-wechat-timeline"><i></i></a>{this.props.children}</div>;
-          
-        } else {
-            
-            res = <div className={style.modalButton}><a href='#' id="showButton" alt={this.props.title} className="share-wechat-timeline"><i></i></a>{this.props.children}</div>;
-        
-        }
 
-        return res;
+        return (
+            <div className={style.modalButton}><a href="#" onClick={this.handleClick} alt={this.props.title} className="share-wechat-timeline"><i></i></a>{this.props.children}</div>
+        );
     }
 });
 

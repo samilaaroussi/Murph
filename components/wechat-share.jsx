@@ -18,7 +18,18 @@ var defaultStyle = {
 var ShareWechat = React.createClass({
 
     handleClick: function() {
-        campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT');
+
+        if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
+            
+            campaignTools.runAppShare(this.props.title, this.props.desc, this.props.pic, this.props.url, 'WECHAT');
+
+        } else {
+            
+            window.open('');
+
+        }
+
+        return res;
     },
 
     render: function() {
