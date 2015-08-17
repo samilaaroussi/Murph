@@ -28,31 +28,22 @@ var ShareWechat = React.createClass({
             window.open('');
 
         }
-
-        return res;
     },
 
     render: function() {
 
-        var res;
         var customStyle = this.props.customStyle || '';
         var mergeStyle = _.merge(defaultStyle, customStyle);
         var style = StyleSheet.create(mergeStyle);
 
-        if (device.isP4 && campaignTools.isInstalled('com.tencent.mm')) {
-            
-            res = (
-                <div className={style.modalButton}>
-                        <a href="#" onClick={this.handleClick} className="share-wechat" alt={this.props.title}><i></i></a>{this.props.children}
-                </div>
-            );
+        var res = (
+            <div className={style.modalButton}>
+                <a href="#" onClick={this.handleClick} className="share-wechat" alt={this.props.title}><i></i></a>
+                {this.props.children}
+            </div>
+        );   
 
-        } else {
-            
-            res = <div className={style.modalButton}><a href='#openModal' className="share-wechat" alt={this.props.title}><i></i></a>{this.props.children}</div>;
-        }
-
-        return res;
+        return res;  
     }
 });
 

@@ -25,21 +25,25 @@ var ShareMoments = React.createClass({
 
         } else {
             
-            window.open('');
+            window.open('http://www.slt.fr');
         
         }
     },
 
     render: function() {
         
-        var res;
         var customStyle = this.props.customStyle || '';
         var mergeStyle = _.merge(defaultStyle, customStyle);
         var style = StyleSheet.create(mergeStyle);
 
-        return (
-            <div className={style.modalButton}><a href="#" onClick={this.handleClick} alt={this.props.title} className="share-wechat-timeline"><i></i></a>{this.props.children}</div>
+        var res = (
+            <div className={style.modalButton}>
+                <a href="#" onClick={this.handleClick} alt={this.props.title} className="share-wechat-timeline"><i></i></a>
+                {this.props.children}
+            </div>
         );
+
+        return res;
     }
 });
 
