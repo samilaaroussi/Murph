@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "latest",
+    "react-lazy-load": "^1.0.3",
     "stilr": "latest"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
     "grunt-reactify": "0.0.2",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
+    "react-modal": "^0.3.0",
     "reactify": "^1.1.1",
     "stilr": "^1.2.1",
     "swiper": "^3.1.0"
