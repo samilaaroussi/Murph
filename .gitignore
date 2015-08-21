@@ -3,7 +3,6 @@
 *.sublime*
 
 /node_modules/
-/dist/
 /test/output/
 /.sass-cache/
 /.tmp/

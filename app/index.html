@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta name="viewport" http-equiv="Content-Type" charset="UTF-8" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <title>Murph - Page Sample</title>
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/swiper.css">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="katana.js"></script>
+
+    <script> 
+        var fullList = null;
+        var pageData = null;
+        var shareData = null;
+        var shareDialogRendered = false;
+        var fullpageSwiper;
+        var cardListSwiper;
+        var mapSwiper;
+        var oldVersion = false;
+        var device = {};
+        device.isP4 = campaignTools.UA.inWdj;
+        device.isWechat = campaignTools.UA.inWechat;
+        device.isRetina = campaignTools.UA.isRetina;
+        device.isPC = campaignTools.inPC();
+        device.isAndroid = campaignTools.UA.inAndroid;
+        if (device.isP4) {
+            var versionName = campaignTools.getVersionName();
+            versionName = versionName.split('.');
+            if (versionName[0] < 4 || versionName[1] < 22) {
+                oldVersion = true;
+            }
+        }
+        var leftFlag = false;
+        var rightFlag = false;
+    </script>
+
+    <script src="components.js"></script>
+    <script src="app-load.js"></script>
+
+</body>
+
+</html>
