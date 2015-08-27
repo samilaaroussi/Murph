@@ -10,6 +10,7 @@ Template
 -------------
 
 #### Create a new campaign
+
 Create a new file from *app/pages* directory and insert these lines :
 
 ```
@@ -27,7 +28,7 @@ var App = React.createClass({
     
     render: function () {
         return (
-            // Insert your project here
+            // Insert your app here
         );
     }
 });
@@ -40,6 +41,7 @@ Generation
 -------------
 
 Open the project directory with your terminal and lunch this command line :
+
 ```
  npm install
 ```
@@ -64,7 +66,27 @@ This command will generate all templates created into */dist* directory.
 Components
 ---------------
 
+####Pages
+
+Create a new horizontal/vertical group of pages (contain multiple pages).
+
+**Properties**
+
+- direction: define slides direction (values: "horizontal" or "vertical")
+- parallax: speed in percentage for parallax image background
+- customStyle:
+    - background
+
+**Example**
+```
+<Pages>
+    <WDJ.Page>...</WDJ.Page>
+    <WDJ.Page>...</WDJ.Page>
+</Pages>
+```
+
 ####Page
+
 Create a new campaign page.
 
 **Example**
@@ -81,10 +103,8 @@ Create a new campaign page.
 **Properties**
 
 - image: source url
-
-**Existing classnames**
-
-- image
+- customStyle:
+    - image
 
 **Example**
 ``` 
@@ -93,75 +113,11 @@ Create a new campaign page.
 />
 ``` 
 
-####Page
-Create a new slide.
-
-**Example**
-
-```
-<Page>
-    <WDJ.Image
-        image="http://www.wandoujia.com/logo.png"
-    />
-</Page>
-```
-
-####Pages
-
-Create a new horizontal/vertical group of pages.
-
-**Properties**
-
-- direction
-- parallax
-- customStyle
-
-**Example**
-```
-<WDJ.Page>
-    <Page>...</Page>
-    <Page>...</Page>
-</WDJ.Page>
-```
-    
-####Pages
-----------
-Create a new horizontal/vertical group of pages (contain multiple pages).
-
-**Existing classnames**
-
-- background
-
-**Properties**
-
-- direction: define slides direction (values: "horizontal" or "vertical")
-- parallax: speed in percentage for parallax image background
-- customStyle
-
-**Example**
-```
-<WDJ.Pages direction="h">
-    <Page>Slide 1</Page>
-    <Page>Slide 2</Page>
-</WDJ.Pages>
-```
-
 ####App Card
-----------
+
 Display an app card with default or custom datas.
 
 ![App Card](screenshots/appCard.png)
-
-**Existing classnames**
-
-- card
-- viewDetail
-- icon
-- metaWrap
-- meta
-- description
-- iconButton
-- installButton
 
 **Properties**
 
@@ -169,7 +125,15 @@ Display an app card with default or custom datas.
 - icon: defining a custom app icon
 - title: defining a custom app title
 - description: defining a custom description
-- customStyle
+- customStyle:
+    - card
+    - viewDetail
+    - icon
+    - metaWrap
+    - meta
+    - description
+    - iconButton
+    - installButton
 
 **Example**
 ```
@@ -180,19 +144,15 @@ Display an app card with default or custom datas.
 ```
 
 ####Card List
-----------
 
 ![Card List](screenshots/cardList.png)
-
-**Existing classnames**
-
-- cardListWrap
-- cardList
 
 **Properties**
 
 - dataValue
-- customStyle
+- customStyle:
+    - cardListWrap
+    - cardList
 
 **Example**
   
@@ -211,14 +171,15 @@ Display an app card with default or custom datas.
 ```
 
 ####Download Button
-----------
 
 ![Download Button](screenshots/download.png)
 
 **Properties**
 
 - packageName
-- customStyle
+- customStyle:
+    - iconButton
+    - installButton
 
 **Example**
 ```
@@ -228,8 +189,7 @@ Display an app card with default or custom datas.
 </WDJ.DownloadButton>
 ```
 
-####Share Buttons (ShareWechat, ShareMoments & ShareWeibo)
-----------
+####Share Buttons (ShareWechat / ShareMoments / ShareWeibo)
 
 ![Social Share](screenshots/socialShare.png)
 
@@ -237,7 +197,9 @@ Display an app card with default or custom datas.
 
 - content
 - size
-- customStyle
+- customStyle:
+    - modalButton
+    - shareButton
 
 **Example**
 
@@ -246,18 +208,16 @@ Display an app card with default or custom datas.
     url="http://example.com"
     title="Moments Share"
     desc="Moments description example">
-    <img src="images/wechat_icon.png" alt="Wechat"/>
+
 </WDJ.ShareWechat>
 ```
 
 ####QR Code
-----------
 
 **Properties**
 
 - content
 - size
-- customStyle
 
 **Example**
 ```
@@ -269,9 +229,11 @@ Display an app card with default or custom datas.
 
 Custom Style
 -------------
+
 For each components, you can add or modify existing class names or modifying existing ones. To do it, use the property *customStyle*.
 
 **Example**
+
 
 This is a simple example with existing classnames from App Card component.
 
@@ -296,8 +258,8 @@ This is a simple example with existing classnames from App Card component.
 ```
 
 TODO
----------------
+-------------
 
-+ UI Builder
-+ Text component
-+ Advanced Video Component
+[ ] UI Builder
+[ ] Text component
+[ ] Advanced Video Component
