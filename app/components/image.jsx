@@ -2,14 +2,11 @@ var React = require('react');
 var _ = require('lodash');
 var StyleSheet = require('stilr');
 var WDJ = require('components');
-var LazyLoad = require('react-lazy-load');
 
 var defaultStyle = {
 
     image : {
 
-        width: '100%',
-        height: 'auto'
     }
 };
 
@@ -22,9 +19,7 @@ var Image = React.createClass({
         var style = StyleSheet.create(mergeStyle);
         
         return (
-            <LazyLoad>
-            <div><img src={this.props.src} className={style.image}/></div>
-            </LazyLoad>
+            <img src={this.props.src} className={style.image}/>
         );
     }
 
