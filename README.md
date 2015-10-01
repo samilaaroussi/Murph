@@ -260,6 +260,6 @@ This is a simple example with existing classnames from App Card component.
 TODO
 -------------
 
-[ ] UI Builder
-[ ] Text component
-[ ] Advanced Video Component
+- [ ] UI Builder
+- [ ] Text component
+- [ ] Advanced Video Component
